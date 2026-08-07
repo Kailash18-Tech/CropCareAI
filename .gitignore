@@ -1,0 +1,30 @@
+# =========================
+# Operating System Files
+# =========================
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# =========================
+# VS Code
+# =========================
+.vscode/
+
+# =========================
+# Node.js
+# =========================
+**/node_modules/
+**/dist/
+**/.env
+
+# Logs
+*.log
+
+# =========================
+# Spring Boot (Future)
+# =========================
+**/target/
+.idea/
+.project
+.classpath
+.settings/
