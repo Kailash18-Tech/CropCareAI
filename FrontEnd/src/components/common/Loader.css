@@ -1,0 +1,53 @@
+.cc-loader-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+}
+
+.cc-loader-fullscreen {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.85);
+  z-index: 999;
+}
+
+.cc-loader {
+  border: 4px solid var(--color-secondary, #c8e6c9);
+  border-top: 4px solid var(--color-primary, #2e7d32);
+  border-radius: 50%;
+  animation: cc-spin 0.8s linear infinite;
+}
+
+.cc-loader-small {
+  width: 20px;
+  height: 20px;
+  border-width: 3px;
+}
+
+.cc-loader-medium {
+  width: 36px;
+  height: 36px;
+}
+
+.cc-loader-large {
+  width: 56px;
+  height: 56px;
+  border-width: 5px;
+}
+
+.cc-loader-label {
+  font-size: 0.9rem;
+  color: var(--color-text-muted, #666);
+}
+
+@keyframes cc-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

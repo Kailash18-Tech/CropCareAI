@@ -1,0 +1,6 @@
+.cc-confirm-message {
+  font-size: 0.95rem;
+  color: var(--color-text-dark, #333);
+  line-height: 1.5;
+  margin: 0;
+}

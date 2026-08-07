@@ -1,0 +1,25 @@
+/* src/components/common/Card.css */
+.card {
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
+}
+
+.card--pad-sm { padding: var(--space-md); }
+.card--pad-md { padding: var(--space-lg); }
+.card--pad-lg { padding: var(--space-xl); }
+
+.card--hoverable {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.card--hoverable:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+  border-color: var(--color-primary-light);
+}

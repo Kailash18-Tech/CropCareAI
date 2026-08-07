@@ -1,0 +1,88 @@
+/* =========================================================
+   global.css
+   Reset + base typography only. No component styles here.
+   ========================================================= */
+@import './tokens.css';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+ 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+ 
+html {
+  scroll-behavior: smooth;
+}
+ 
+body {
+  font-family: var(--font-family);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-regular);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+}
+ 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--fw-bold);
+  line-height: 1.25;
+  color: var(--color-text);
+}
+ 
+h1 { font-size: var(--fs-3xl); }
+h2 { font-size: var(--fs-2xl); }
+h3 { font-size: var(--fs-xl); }
+h4 { font-size: var(--fs-lg); }
+ 
+p {
+  color: var(--color-text-muted);
+}
+ 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+ 
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+ 
+input, textarea, select {
+  font-family: inherit;
+  font-size: var(--fs-base);
+}
+ 
+ul, ol {
+  list-style: none;
+}
+ 
+img {
+  max-width: 100%;
+  display: block;
+}
+ 
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(46, 125, 50, 0.25);
+  border-radius: var(--radius-pill);
+}
+ 
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+ 
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
