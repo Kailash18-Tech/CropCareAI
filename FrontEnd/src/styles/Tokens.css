@@ -1,42 +1,46 @@
-/* * =========================================================
-   tokens.css
-   Design tokens for CropCare AI — CSS variables only.
-   Every other stylesheet should reference these, never
-   hardcode a color/spacing/radius value directly.
+/* =========================================================
+   CropCare AI
+   Design Tokens
    ========================================================= */
-  */
+
 :root {
-  /* ---- Brand colors ---- */
+  /* ---------- Brand Colors ---------- */
   --color-primary: #2E7D32;
   --color-primary-dark: #1B5E20;
   --color-primary-light: #66BB6A;
-  --color-secondary: #A5D6A7; /* light green */
+
+  --color-secondary: #A5D6A7;
   --color-secondary-light: #E8F5E9;
-  --color-accent: #F57C00;    /* orange */
+
+  --color-accent: #F57C00;
   --color-accent-light: #FFE0B2;
- 
-  /* ---- Surfaces ---- */
+
+  /* ---------- Surfaces ---------- */
   --color-bg: #F7FAF7;
   --color-card: #FFFFFF;
   --color-border: #E0E5E0;
- 
-  /* ---- Text ---- */
-  --color-text: #212121;      /* dark gray */
+
+  /* ---------- Text ---------- */
+  --color-text: #212121;
   --color-text-muted: #6B7280;
   --color-text-inverse: #FFFFFF;
- 
-  /* ---- Status ---- */
+
+  /* ---------- Status ---------- */
   --color-success: #2E7D32;
   --color-success-bg: #E8F5E9;
+
   --color-warning: #F57C00;
   --color-warning-bg: #FFF3E0;
+
   --color-danger: #D32F2F;
   --color-danger-bg: #FDECEA;
+
   --color-info: #0288D1;
   --color-info-bg: #E1F5FE;
- 
-  /* ---- Typography ---- */
+
+  /* ---------- Typography ---------- */
   --font-family: 'Poppins', sans-serif;
+
   --fs-xs: 0.75rem;
   --fs-sm: 0.875rem;
   --fs-base: 1rem;
@@ -44,37 +48,37 @@
   --fs-xl: 1.5rem;
   --fs-2xl: 2rem;
   --fs-3xl: 2.5rem;
+
   --fw-regular: 400;
   --fw-medium: 500;
   --fw-semibold: 600;
   --fw-bold: 700;
- 
-  /* ---- Spacing scale ---- */
+
+  /* ---------- Spacing ---------- */
   --space-xs: 4px;
   --space-sm: 8px;
   --space-md: 16px;
   --space-lg: 24px;
   --space-xl: 32px;
   --space-2xl: 48px;
- 
-  /* ---- Radius ---- */
+
+  /* ---------- Radius ---------- */
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 16px;
   --radius-pill: 999px;
- 
-  /* ---- Shadows (soft only) ---- */
+
+  /* ---------- Shadows ---------- */
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
   --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
   --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.10);
- 
-  /* ---- Layout ---- */
+
+  /* ---------- Layout ---------- */
   --sidebar-width: 260px;
   --sidebar-width-collapsed: 76px;
   --topbar-height: 72px;
- 
-  /* ---- Transitions ---- */
+
+  /* ---------- Transitions ---------- */
   --transition-fast: 0.15s ease;
   --transition-base: 0.25s ease;
 }
- 

@@ -1,88 +1,210 @@
 /* =========================================================
-   global.css
-   Reset + base typography only. No component styles here.
+   CropCare AI
+   Global Styles
    ========================================================= */
-@import './tokens.css';
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
- 
-* {
+
+@import "./Tokens.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
- 
+
+
+/* =========================================================
+   HTML
+   ========================================================= */
+
 html {
   scroll-behavior: smooth;
 }
- 
+
+
+/* =========================================================
+   BODY
+   ========================================================= */
+
 body {
   font-family: var(--font-family);
   font-size: var(--fs-base);
   font-weight: var(--fw-regular);
+  line-height: 1.5;
+
   color: var(--color-text);
   background-color: var(--color-bg);
+
   -webkit-font-smoothing: antialiased;
-  line-height: 1.5;
+  -moz-osx-font-smoothing: grayscale;
 }
- 
-h1, h2, h3, h4, h5, h6 {
+
+
+/* =========================================================
+   HEADINGS
+   ========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-text);
   font-weight: var(--fw-bold);
   line-height: 1.25;
-  color: var(--color-text);
 }
- 
-h1 { font-size: var(--fs-3xl); }
-h2 { font-size: var(--fs-2xl); }
-h3 { font-size: var(--fs-xl); }
-h4 { font-size: var(--fs-lg); }
- 
+
+
+/* =========================================================
+   HEADING SIZES
+   ========================================================= */
+
+h1 {
+  font-size: var(--fs-3xl);
+}
+
+h2 {
+  font-size: var(--fs-2xl);
+}
+
+h3 {
+  font-size: var(--fs-xl);
+}
+
+h4 {
+  font-size: var(--fs-lg);
+}
+
+h5,
+h6 {
+  font-size: var(--fs-base);
+}
+
+
+/* =========================================================
+   PARAGRAPHS
+   ========================================================= */
+
 p {
   color: var(--color-text-muted);
 }
- 
+
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
 a {
   color: inherit;
   text-decoration: none;
 }
- 
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
 button {
   font-family: inherit;
+  font-size: inherit;
+
   cursor: pointer;
+
   border: none;
   background: none;
 }
- 
-input, textarea, select {
+
+
+/* =========================================================
+   FORM ELEMENTS
+   ========================================================= */
+
+input,
+textarea,
+select {
   font-family: inherit;
   font-size: var(--fs-base);
 }
- 
-ul, ol {
+
+
+/* =========================================================
+   LISTS
+   ========================================================= */
+
+ul,
+ol {
   list-style: none;
 }
- 
+
+
+/* =========================================================
+   IMAGES
+   ========================================================= */
+
 img {
-  max-width: 100%;
   display: block;
+  max-width: 100%;
 }
- 
+
+
+/* =========================================================
+   TEXT SELECTION
+   ========================================================= */
+
+::selection {
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+}
+
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
+
 ::-webkit-scrollbar-thumb {
   background: rgba(46, 125, 50, 0.25);
   border-radius: var(--radius-pill);
 }
- 
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
 :focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 2px;
 }
- 
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
 @media (prefers-reduced-motion: reduce) {
-  * {
+  *,
+  *::before,
+  *::after {
     animation: none !important;
     transition: none !important;
+    scroll-behavior: auto !important;
   }
 }
