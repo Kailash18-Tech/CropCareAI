@@ -1,0 +1,483 @@
+/* =========================================================
+   MANDI PRICES
+   CropCare AI
+   ========================================================= */
+
+.mandi-page {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+   ========================================================= */
+
+.mandi-page-header {
+  margin-bottom: var(--space-lg);
+}
+
+.mandi-page-header h2 {
+  margin: 0;
+
+  font-size: 32px;
+  font-weight: var(--fw-bold);
+
+  color: var(--color-text);
+}
+
+.mandi-page-header p {
+  margin: 6px 0 0;
+
+  font-size: var(--fs-sm);
+
+  color: var(--color-text-muted);
+}
+
+
+/* =========================================================
+   MAIN CARD
+   ========================================================= */
+
+.mandi-card {
+  background: var(--color-card);
+
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-lg);
+
+  margin-bottom: var(--space-lg);
+
+  overflow: hidden;
+
+  box-shadow: var(--shadow-sm);
+}
+
+
+/* =========================================================
+   CARD HEADER
+   ========================================================= */
+
+.mandi-card-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: var(--space-md);
+
+  padding: 28px 26px;
+
+  border-bottom: 1px solid var(--color-border);
+}
+
+.mandi-card-header h3 {
+  margin: 0;
+
+  font-size: var(--fs-lg);
+
+  font-weight: var(--fw-bold);
+
+  color: var(--color-text);
+}
+
+.mandi-card-header p {
+  margin: 6px 0 0;
+
+  color: var(--color-text-muted);
+
+  font-size: var(--fs-sm);
+}
+
+.mandi-updated {
+  padding: 8px 14px;
+
+  border-radius: var(--radius-pill);
+
+  background: var(--color-secondary-light);
+
+  color: var(--color-primary);
+
+  font-size: var(--fs-xs);
+
+  font-weight: var(--fw-bold);
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   LOCATION / MARKET SELECTION
+   ========================================================= */
+
+.mandi-selection {
+  display: grid;
+
+  grid-template-columns: 1fr auto 1fr;
+
+  align-items: end;
+
+  gap: 18px;
+
+  padding: 22px 26px;
+
+  background: var(--color-bg);
+
+  border-bottom: 1px solid var(--color-border);
+}
+
+.mandi-form-group {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.mandi-form-group label {
+  font-size: var(--fs-xs);
+
+  font-weight: var(--fw-bold);
+
+  color: var(--color-text-muted);
+}
+
+.mandi-form-group select {
+  width: 100%;
+
+  min-height: 44px;
+
+  padding: 0 14px;
+
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-sm);
+
+  background: var(--color-card);
+
+  color: var(--color-text);
+
+  font-size: var(--fs-sm);
+
+  font-weight: var(--fw-semibold);
+
+  outline: none;
+
+  cursor: pointer;
+}
+
+.mandi-form-group select:focus {
+  border-color: var(--color-primary);
+
+  box-shadow:
+    0 0 0 3px rgba(46, 125, 50, 0.12);
+}
+
+
+/* =========================================================
+   LOCATION BUTTON
+   ========================================================= */
+
+.mandi-location-btn {
+  min-height: 44px;
+
+  padding: 0 18px;
+
+  border: 1px solid var(--color-primary);
+
+  border-radius: var(--radius-sm);
+
+  background: var(--color-primary);
+
+  color: white;
+
+  font-size: var(--fs-sm);
+
+  font-weight: var(--fw-bold);
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  transition:
+    background var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.mandi-location-btn:hover {
+  background: var(--color-primary-dark);
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   SELECTED MARKET
+   ========================================================= */
+
+.mandi-selected-market {
+  padding: 20px 26px;
+
+  border-bottom: 1px solid var(--color-border);
+}
+
+.mandi-selected-market h4 {
+  margin: 0;
+
+  font-size: var(--fs-base);
+
+  font-weight: var(--fw-bold);
+
+  color: var(--color-text);
+}
+
+.mandi-selected-market p {
+  margin: 5px 0 0;
+
+  color: var(--color-text-muted);
+
+  font-size: var(--fs-xs);
+}
+
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+.mandi-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+}
+
+.mandi-table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  min-width: 700px;
+}
+
+.mandi-table th {
+  padding: 15px 26px;
+
+  background: var(--color-bg);
+
+  color: var(--color-text-muted);
+
+  font-size: var(--fs-xs);
+
+  font-weight: var(--fw-bold);
+
+  text-align: left;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.04em;
+}
+
+.mandi-table td {
+  padding: 18px 26px;
+
+  border-top: 1px solid var(--color-border);
+
+  color: var(--color-text);
+
+  font-size: var(--fs-sm);
+}
+
+.mandi-table tbody tr:hover {
+  background: rgba(46, 125, 50, 0.025);
+}
+
+.mandi-table td strong {
+  font-weight: var(--fw-bold);
+}
+
+
+/* =========================================================
+   PRICE UNIT
+   ========================================================= */
+
+.mandi-unit {
+  margin-left: 5px;
+
+  color: var(--color-text-muted);
+
+  font-size: var(--fs-xs);
+}
+
+
+/* =========================================================
+   PRICE CHANGE
+   ========================================================= */
+
+.mandi-change {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: 6px 10px;
+
+  border-radius: var(--radius-pill);
+
+  font-size: var(--fs-xs);
+
+  font-weight: var(--fw-bold);
+}
+
+.mandi-change.up {
+  background: var(--color-secondary-light);
+
+  color: var(--color-primary);
+}
+
+.mandi-change.down {
+  background: #fdeaea;
+
+  color: #d32f2f;
+}
+
+
+/* =========================================================
+   VIEW HISTORY BUTTON
+   ========================================================= */
+
+.mandi-crop-btn {
+  border: 1px solid var(--color-border);
+
+  background: var(--color-card);
+
+  color: var(--color-primary);
+
+  padding: 8px 12px;
+
+  border-radius: var(--radius-sm);
+
+  font-size: var(--fs-xs);
+
+  font-weight: var(--fw-bold);
+
+  cursor: pointer;
+
+  transition:
+    background var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.mandi-crop-btn:hover,
+.mandi-crop-btn.selected {
+  background: var(--color-primary);
+
+  color: white;
+
+  border-color: var(--color-primary);
+}
+
+
+/* =========================================================
+   HISTORY SELECTION
+   ========================================================= */
+
+.mandi-history-selection {
+  display: flex;
+
+  align-items: center;
+
+  gap: 60px;
+
+  padding: 18px 26px;
+
+  background: var(--color-bg);
+
+  border-bottom: 1px solid var(--color-border);
+}
+
+.mandi-history-selection div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.mandi-history-selection span {
+  font-size: var(--fs-xs);
+
+  color: var(--color-text-muted);
+}
+
+.mandi-history-selection strong {
+  font-size: var(--fs-sm);
+
+  color: var(--color-text);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .mandi-selection {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .mandi-location-btn {
+    grid-column: 1 / -1;
+
+    justify-self: start;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+  .mandi-page-header h2 {
+    font-size: 26px;
+  }
+
+  .mandi-card-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    padding: 22px 18px;
+  }
+
+  .mandi-selection {
+    grid-template-columns: 1fr;
+
+    padding: 18px;
+  }
+
+  .mandi-location-btn {
+    width: 100%;
+  }
+
+  .mandi-selected-market {
+    padding: 18px;
+  }
+
+  .mandi-table th,
+  .mandi-table td {
+    padding: 14px 18px;
+  }
+
+  .mandi-history-selection {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    padding: 18px;
+  }
+}

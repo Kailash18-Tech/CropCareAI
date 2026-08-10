@@ -1,0 +1,503 @@
+/* =================================
+   Settings Page
+================================= */
+
+.settings-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 28px;
+}
+
+/* =================================
+   Page Header
+================================= */
+
+.settings-header {
+  margin-bottom: 28px;
+}
+
+.settings-eyebrow {
+  margin: 0 0 6px;
+
+  color: #4f8a52;
+
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.settings-header h1 {
+  margin: 0;
+
+  color: #243b27;
+
+  font-size: 32px;
+}
+
+.settings-subtitle {
+  margin: 8px 0 0;
+
+  color: #6b776d;
+
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* =================================
+   Settings Card
+================================= */
+
+.settings-card {
+  margin-bottom: 20px;
+
+  background: #ffffff;
+
+  border: 1px solid #dfe7dc;
+  border-radius: 16px;
+
+  overflow: hidden;
+}
+
+/* =================================
+   Card Header
+================================= */
+
+.settings-card-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  padding: 22px 24px;
+
+  background: #f8fbf7;
+
+  border-bottom: 1px solid #e6ede3;
+}
+
+.settings-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 45px;
+  height: 45px;
+
+  flex-shrink: 0;
+
+  background: #e3f1df;
+
+  border-radius: 11px;
+
+  font-size: 20px;
+}
+
+.settings-card-header h2 {
+  margin: 0;
+
+  color: #304934;
+
+  font-size: 18px;
+}
+
+.settings-card-header p {
+  margin: 5px 0 0;
+
+  color: #758076;
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* =================================
+   Settings Options
+================================= */
+
+.settings-options {
+  padding: 0 24px;
+}
+
+.settings-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 25px;
+
+  padding: 20px 0;
+
+  border-bottom: 1px solid #edf1eb;
+}
+
+.settings-option:last-child {
+  border-bottom: none;
+}
+
+.settings-option h3 {
+  margin: 0;
+
+  color: #3d503f;
+
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.settings-option p {
+  margin: 5px 0 0;
+
+  color: #7b857d;
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* =================================
+   Toggle Switch
+================================= */
+
+.settings-toggle {
+  position: relative;
+
+  width: 48px;
+  height: 26px;
+
+  flex-shrink: 0;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 20px;
+
+  background: #cfd8ce;
+
+  cursor: pointer;
+
+  transition: background 0.2s ease;
+}
+
+.settings-toggle span {
+  position: absolute;
+
+  top: 3px;
+  left: 3px;
+
+  width: 20px;
+  height: 20px;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+
+  transition: transform 0.2s ease;
+}
+
+.settings-toggle.active {
+  background: #6ea56f;
+}
+
+.settings-toggle.active span {
+  transform: translateX(22px);
+}
+
+/* =================================
+   Settings Field
+================================= */
+
+.settings-field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 25px;
+
+  padding: 22px 24px;
+}
+
+.settings-field label {
+  color: #435245;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.settings-field select {
+  width: 220px;
+  min-height: 42px;
+
+  padding: 9px 12px;
+
+  border: 1px solid #cfdccd;
+  border-radius: 9px;
+
+  background: #ffffff;
+  color: #3d503f;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  cursor: pointer;
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.settings-field select:focus {
+  border-color: #76a978;
+
+  box-shadow:
+    0 0 0 3px rgba(118, 169, 120, 0.12);
+}
+
+/* =================================
+   Security
+================================= */
+
+.settings-security-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 25px;
+
+  padding: 22px 24px;
+}
+
+.settings-security-row h3 {
+  margin: 0;
+
+  color: #3d503f;
+
+  font-size: 15px;
+}
+
+.settings-security-row p {
+  margin: 5px 0 0;
+
+  color: #7b857d;
+
+  font-size: 13px;
+}
+
+/* =================================
+   Secondary Button
+================================= */
+
+.settings-secondary-btn {
+  padding: 10px 15px;
+
+  border: 1px solid #b8ceb4;
+  border-radius: 9px;
+
+  background: #f4faf2;
+  color: #4a7d4e;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.settings-secondary-btn:hover {
+  background: #eaf5e7;
+  border-color: #9fbe9b;
+}
+
+/* =================================
+   Account
+================================= */
+
+.settings-account-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 22px 24px;
+
+  color: #58655a;
+
+  font-size: 14px;
+}
+
+.settings-status {
+  padding: 6px 12px;
+
+  border-radius: 20px;
+
+  background: #e7f4e4;
+  color: #4b824f;
+
+  font-size: 12px;
+}
+
+/* =================================
+   Logout Card
+================================= */
+
+.settings-logout-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 25px;
+
+  margin-top: 28px;
+  padding: 22px 24px;
+
+  background: #fffafa;
+
+  border: 1px solid #eadada;
+  border-radius: 16px;
+}
+
+.settings-logout-card h2 {
+  margin: 0;
+
+  color: #744646;
+
+  font-size: 17px;
+}
+
+.settings-logout-card p {
+  margin: 6px 0 0;
+
+  color: #8b7070;
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* =================================
+   Logout Button
+================================= */
+
+.settings-logout-btn {
+  flex-shrink: 0;
+
+  min-height: 42px;
+
+  padding: 10px 18px;
+
+  border: 1px solid #d9aaaa;
+  border-radius: 9px;
+
+  background: #fff5f5;
+  color: #a04f4f;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.settings-logout-btn:hover {
+  background: #ffebeb;
+  border-color: #c98e8e;
+}
+
+.settings-logout-btn:active {
+  transform: translateY(1px);
+}
+
+/* =================================
+   Responsive - Tablet
+================================= */
+
+@media (max-width: 768px) {
+  .settings-page {
+    padding: 20px 16px;
+  }
+
+  .settings-header h1 {
+    font-size: 28px;
+  }
+
+  .settings-option {
+    gap: 15px;
+  }
+
+  .settings-field {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .settings-field select {
+    width: 100%;
+  }
+
+  .settings-security-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .settings-secondary-btn {
+    width: 100%;
+  }
+
+  .settings-logout-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .settings-logout-btn {
+    width: 100%;
+  }
+}
+
+/* =================================
+   Responsive - Mobile
+================================= */
+
+@media (max-width: 480px) {
+  .settings-page {
+    padding: 16px 12px;
+  }
+
+  .settings-header h1 {
+    font-size: 25px;
+  }
+
+  .settings-card-header {
+    padding: 18px;
+  }
+
+  .settings-options {
+    padding: 0 18px;
+  }
+
+  .settings-option {
+    align-items: flex-start;
+  }
+
+  .settings-option h3 {
+    font-size: 14px;
+  }
+
+  .settings-option p {
+    font-size: 12px;
+  }
+
+  .settings-field {
+    padding: 18px;
+  }
+
+  .settings-security-row {
+    padding: 18px;
+  }
+
+  .settings-account-row {
+    padding: 18px;
+  }
+
+  .settings-logout-card {
+    padding: 18px;
+  }
+}

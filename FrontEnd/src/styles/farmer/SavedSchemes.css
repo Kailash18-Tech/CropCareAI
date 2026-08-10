@@ -1,0 +1,218 @@
+/* =========================================
+   SAVED SCHEMES PAGE
+========================================= */
+
+.saved-schemes-page {
+  width: 100%;
+  padding: 28px;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.saved-schemes-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.saved-schemes-eyebrow {
+  margin: 0 0 6px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  color: var(--primary);
+}
+
+.saved-schemes-header h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--on-surface);
+}
+
+.saved-schemes-subtitle {
+  max-width: 650px;
+  margin: 8px 0 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--on-surface-variant);
+}
+
+/* =========================================
+   SAVED COUNT
+========================================= */
+
+.saved-schemes-count {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 16px;
+  border: 1px solid #cfe4cc;
+  border-radius: 14px;
+  background: #edf7eb;
+  color: #39703e;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* =========================================
+   SAVED SCHEMES SECTION
+========================================= */
+
+.saved-schemes-section {
+  width: 100%;
+}
+
+.saved-schemes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+/*
+   The SchemeCard component is reused here,
+   so its card styling comes from
+   GovernmentSchemes.css.
+*/
+
+.saved-schemes-grid .scheme-card {
+  min-height: 390px;
+}
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.saved-schemes-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 360px;
+  padding: 40px 24px;
+  border: 1px dashed #bcd4b8;
+  border-radius: 18px;
+  background: #f3f9f1;
+  text-align: center;
+}
+
+.saved-schemes-empty-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  margin-bottom: 18px;
+  border-radius: 18px;
+  background: #dff0dc;
+  font-size: 32px;
+}
+
+.saved-schemes-empty h2 {
+  margin: 0 0 8px;
+  font-size: 21px;
+  color: var(--on-surface);
+}
+
+.saved-schemes-empty p {
+  max-width: 500px;
+  margin: 4px 0;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--on-surface-variant);
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+  .saved-schemes-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* =========================================
+   SMALL TABLET
+========================================= */
+
+@media (max-width: 800px) {
+  .saved-schemes-header {
+    flex-direction: column;
+  }
+
+  .saved-schemes-count {
+    width: fit-content;
+  }
+
+  .saved-schemes-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .saved-schemes-page {
+    padding: 20px 16px;
+  }
+
+  .saved-schemes-header h1 {
+    font-size: 27px;
+  }
+
+  .saved-schemes-subtitle {
+    font-size: 14px;
+  }
+
+  .saved-schemes-empty {
+    min-height: 320px;
+    padding: 30px 18px;
+  }
+
+  .saved-schemes-empty h2 {
+    font-size: 19px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 420px) {
+  .saved-schemes-page {
+    padding: 16px 12px;
+  }
+}
+.saved-schemes-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 24px;
+  padding: 10px 16px;
+
+  background: #eaf6e7;
+  color: #2f6f3e;
+
+  border: 1px solid #c9e2c5;
+  border-radius: 10px;
+
+  text-decoration: none;
+  font-weight: 600;
+
+  transition: all 0.2s ease;
+}
+
+.saved-schemes-back-btn:hover {
+  background: #dff0db;
+  border-color: #a9cda5;
+  transform: translateX(-2px);
+}

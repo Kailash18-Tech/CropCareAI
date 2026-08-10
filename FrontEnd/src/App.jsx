@@ -29,7 +29,7 @@ import './styles/Public.css';
 function App() {
   return (
     <>
-      <PublicHeader />
+      
       <AppRoutes />
     </>
   );

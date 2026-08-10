@@ -1,0 +1,596 @@
+/* =========================================
+   SEED LABS PAGE
+========================================= */
+
+.seedlabs-page {
+  width: 100%;
+  padding: 28px;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.seedlabs-header {
+  margin-bottom: 24px;
+}
+
+.seedlabs-eyebrow {
+  margin: 0 0 6px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  color: var(--primary);
+}
+
+.seedlabs-header h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--on-surface);
+}
+
+.seedlabs-subtitle {
+  margin: 8px 0 0;
+  max-width: 700px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--on-surface-variant);
+}
+
+/* =========================================
+   INTRO CARD
+========================================= */
+
+.seedlabs-intro {
+  margin-bottom: 32px;
+  padding: 24px;
+  border: 1px solid var(--outline-variant);
+  border-radius: 16px;
+  background: var(--surface-container);
+}
+
+.seedlabs-intro-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.seedlabs-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  background: var(--primary-container);
+  font-size: 28px;
+}
+
+.seedlabs-intro h2 {
+  margin: 0 0 7px;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--on-surface);
+}
+
+.seedlabs-intro p {
+  margin: 0;
+  max-width: 850px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--on-surface-variant);
+}
+
+/* =========================================
+   SECTION
+========================================= */
+
+.seedlabs-section {
+  width: 100%;
+}
+
+.seedlabs-section-header {
+  margin-bottom: 18px;
+}
+
+.seedlabs-section-header h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--on-surface);
+}
+
+.seedlabs-section-header p {
+  margin: 6px 0 0;
+  font-size: 14px;
+  color: var(--on-surface-variant);
+}
+
+/* =========================================
+   LAB GRID
+========================================= */
+
+.seedlabs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+/* =========================================
+   LAB CARD
+========================================= */
+.seedlab-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 330px;
+  overflow: hidden;
+  border: 1px solid #d6e8d5;
+  border-radius: 18px;
+  background: #f3f9f1;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+.seedlab-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--primary);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================================
+   CARD TOP
+========================================= */
+
+.seedlab-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 20px 20px 0;
+}
+
+.seedlab-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: var(--primary-container);
+  font-size: 23px;
+}
+
+.seedlab-card-badge {
+  padding: 6px 10px;
+  border-radius: 20px;
+  background: var(--secondary-container);
+  color: var(--on-secondary-container);
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.seedlab-card-content {
+  flex: 1;
+  padding: 18px 20px;
+}
+
+.seedlab-card-content h3 {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.4;
+  font-weight: 700;
+  color: var(--on-surface);
+}
+
+.seedlab-location {
+  margin: 8px 0 18px;
+  font-size: 13px;
+  color: var(--on-surface-variant);
+}
+
+.seedlab-services h4 {
+  margin: 0 0 10px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--on-surface);
+}
+
+.seedlab-services ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.seedlab-services li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--on-surface-variant);
+}
+
+.seedlab-services li span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--primary-container);
+  color: var(--primary);
+  font-size: 11px;
+  font-weight: 800;
+}
+/* =========================================
+   CARD FOOTER
+========================================= */
+
+.seedlab-card-footer {
+  padding: 0 20px 20px;
+}
+.seedlab-view-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 11px 16px;
+  border: 1px solid #b8d9b5;
+  border-radius: 10px;
+  background: #dff0dc;
+  color: #2f6b35;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.seedlab-view-btn:hover {
+  background: #c9e5c5;
+  color: #24572a;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.seedlab-view-btn:active {
+  transform: translateY(0);
+}
+
+.seedlab-view-btn:hover {
+  background: var(--primary);
+  color: var(--on-primary);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.seedlab-view-btn:active {
+  transform: translateY(0);
+}
+
+.seedlab-view-btn:hover {
+  background: var(--primary-dark, var(--primary));
+  transform: translateY(-1px);
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+  .seedlabs-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+    .seedlabs-location-section {
+  padding: 18px;
+}
+
+.seedlabs-location-header {
+  align-items: stretch;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.seedlabs-location-header h2 {
+  font-size: 18px;
+}
+
+.seedlabs-location-header p {
+  font-size: 13px;
+}
+
+.seedlabs-location-select-wrapper {
+  width: 100%;
+  min-width: 0;
+}
+
+.seedlabs-location-select {
+  min-height: 46px;
+}
+
+.seedlabs-section-header {
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.seedlabs-result-count {
+  align-self: flex-start;
+}
+  .seedlabs-page {
+    padding: 20px 16px;
+  }
+
+  .seedlabs-header h1 {
+    font-size: 27px;
+  }
+
+  .seedlabs-subtitle {
+    font-size: 14px;
+  }
+
+  .seedlabs-intro {
+    padding: 18px;
+  }
+
+  .seedlabs-intro-content {
+    gap: 13px;
+  }
+
+  .seedlabs-icon {
+    width: 46px;
+    height: 46px;
+    font-size: 23px;
+  }
+
+  .seedlabs-intro h2 {
+    font-size: 18px;
+  }
+
+  .seedlabs-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .seedlab-card {
+    min-height: auto;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 420px) {
+  .seedlabs-page {
+    padding: 16px 12px;
+  }
+
+  .seedlabs-card-top {
+    padding: 16px 16px 0;
+  }
+
+  .seedlab-card-content {
+    padding: 16px;
+  }
+
+  .seedlab-card-footer {
+    padding: 0 16px 16px;
+  }
+
+  .seedlab-card-badge {
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+/* =========================================
+   LOCATION SELECTOR
+========================================= */
+
+.seedlabs-location-section {
+  width: 100%;
+  margin-bottom: 32px;
+  padding: 22px 24px;
+
+  border: 1px solid var(--outline-variant);
+  border-radius: 16px;
+
+  background: var(--surface-container);
+}
+
+.seedlabs-location-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.seedlabs-location-header h2 {
+  margin: 0 0 6px;
+
+  font-size: 20px;
+  font-weight: 700;
+
+  color: var(--on-surface);
+}
+
+.seedlabs-location-header p {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 1.5;
+
+  color: var(--on-surface-variant);
+}
+
+
+/* =========================================
+   LOCATION DROPDOWN
+========================================= */
+
+.seedlabs-location-select-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+
+  min-width: 280px;
+}
+
+.seedlabs-location-select-wrapper label {
+  font-size: 12px;
+  font-weight: 700;
+
+  color: var(--on-surface);
+}
+
+.seedlabs-location-select {
+  width: 100%;
+  min-height: 44px;
+
+  padding: 10px 40px 10px 14px;
+
+  border: 1px solid #c9d9ca;
+  border-radius: 10px;
+
+  background: #ffffff;
+  color: var(--on-surface);
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.seedlabs-location-select:hover {
+  border-color: var(--primary);
+}
+
+.seedlabs-location-select:focus {
+  border-color: var(--primary);
+
+  box-shadow:
+    0 0 0 3px
+    rgba(47, 107, 53, 0.12);
+}
+
+
+/* =========================================
+   RESULT COUNT
+========================================= */
+
+.seedlabs-section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+
+  margin-bottom: 18px;
+}
+
+.seedlabs-result-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 7px 12px;
+
+  border-radius: 20px;
+
+  background: var(--primary-container);
+  color: var(--primary);
+
+  font-size: 11px;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.seedlabs-empty {
+  min-height: 260px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px 20px;
+
+  border: 1px solid var(--outline-variant);
+  border-radius: 16px;
+
+  background: var(--surface-container);
+
+  text-align: center;
+}
+
+.seedlabs-empty-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 60px;
+  height: 60px;
+
+  margin-bottom: 14px;
+
+  border-radius: 50%;
+
+  background: var(--primary-container);
+
+  font-size: 27px;
+}
+
+.seedlabs-empty h3 {
+  margin: 0 0 6px;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  color: var(--on-surface);
+}
+
+.seedlabs-empty p {
+  max-width: 450px;
+
+  margin: 0;
+
+  font-size: 13px;
+  line-height: 1.6;
+
+  color: var(--on-surface-variant);
+}
