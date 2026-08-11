@@ -1,0 +1,991 @@
+/* =========================================================
+   CropCare AI
+   Admin - Manage Admins
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.manage-admin-page {
+  width: 100%;
+  min-height: 100%;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+   ========================================================= */
+
+.manage-admin-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.manage-admin-eyebrow {
+  margin: 0 0 6px;
+
+  color: #4f8a52;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 1.4px;
+}
+
+.manage-admin-header h1 {
+  margin: 0;
+
+  color: #183c28;
+
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.manage-admin-subtitle {
+  margin: 8px 0 0;
+
+  color: #6b7d71;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   ADD ADMIN BUTTON
+   ========================================================= */
+
+.manage-admin-add-btn {
+  flex-shrink: 0;
+
+  border: none;
+  border-radius: 8px;
+
+  padding: 12px 18px;
+
+  background: #2f6f46;
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  transition: all 0.2s ease;
+}
+
+.manage-admin-add-btn:hover {
+  background: #255b39;
+
+  transform: translateY(-1px);
+}
+
+.manage-admin-add-btn:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   MAIN ADMIN CARD
+   ========================================================= */
+
+.manage-admin-card {
+  width: 100%;
+
+  background: #f3f8f4;
+
+  border: 1px solid #d8e7dc;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   CARD HEADER
+   ========================================================= */
+
+.manage-admin-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 20px 22px;
+
+  background: #e6f1e9;
+
+  border-bottom: 1px solid #d0dfd4;
+}
+
+.manage-admin-card-header h2 {
+  margin: 0 0 5px;
+
+  color: #183c28;
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.manage-admin-card-header p {
+  margin: 0;
+
+  color: #6b7d71;
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   ADMIN COUNT
+   ========================================================= */
+
+.manage-admin-count {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 6px 12px;
+
+  border-radius: 20px;
+
+  background: #d8ebdc;
+
+  color: #356847;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   FILTER CONTAINER
+   ========================================================= */
+
+.manage-admin-filter {
+  width: 100%;
+
+  padding: 20px 22px;
+
+  box-sizing: border-box;
+
+  background: #f3f8f4;
+
+  border-bottom: 1px solid #d8e7dc;
+}
+
+
+/* =========================================================
+   SEARCH BOX
+   ========================================================= */
+
+.manage-admin-search {
+  position: relative;
+
+  width: 100%;
+  max-width: 450px;
+
+  display: flex;
+  align-items: center;
+}
+
+
+/* =========================================================
+   SEARCH ICON
+   ========================================================= */
+
+.manage-admin-search-icon {
+  position: absolute;
+
+  left: 13px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 15px;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   SEARCH INPUT
+   ========================================================= */
+
+.manage-admin-search input {
+  width: 100%;
+
+  height: 42px;
+
+  padding: 0 14px 0 40px;
+
+  border: 1px solid #cbdccf;
+
+  border-radius: 7px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #263d2e;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  box-sizing: border-box;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.manage-admin-search input::placeholder {
+  color: #9aa99f;
+}
+
+.manage-admin-search input:focus {
+  border-color: #5b936b;
+
+  box-shadow:
+    0 0 0 3px rgba(91, 147, 107, 0.12);
+}
+
+
+/* =========================================================
+   TABLE SECTION
+   ========================================================= */
+
+.manage-admin-table-section {
+  width: 100%;
+
+  margin-bottom: 24px;
+}
+
+
+/* =========================================================
+   TABLE SECTION HEADER
+   ========================================================= */
+
+.manage-admin-section-header {
+  padding: 20px 22px 16px;
+}
+
+.manage-admin-section-header h2 {
+  margin: 0 0 5px;
+
+  color: #183c28;
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.manage-admin-section-header p {
+  margin: 0;
+
+  color: #6b7d71;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   TABLE WRAPPER
+   ========================================================= */
+
+.manage-admin-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+
+  background: #f3f8f4;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+.manage-admin-table {
+  width: 100%;
+
+  min-width: 850px;
+
+  border-collapse: collapse;
+
+  background: #f3f8f4;
+}
+
+
+/* =========================================================
+   TABLE HEADER
+   ========================================================= */
+
+.manage-admin-table thead {
+  background: #e6f1e9;
+}
+
+.manage-admin-table th {
+  padding: 14px 16px;
+
+  border-top: 1px solid #d8e7dc;
+
+  border-bottom: 1px solid #cfded3;
+
+  color: #294936;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  text-align: left;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   TABLE CELLS
+   ========================================================= */
+
+.manage-admin-table td {
+  padding: 15px 16px;
+
+  border-bottom: 1px solid #dce8df;
+
+  color: #405449;
+
+  font-size: 13px;
+
+  vertical-align: middle;
+}
+
+
+/* =========================================================
+   TABLE HOVER
+   ========================================================= */
+
+.manage-admin-table tbody tr {
+  transition: background 0.2s ease;
+}
+
+.manage-admin-table tbody tr:hover {
+  background: #edf5ef;
+}
+
+.manage-admin-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+
+/* =========================================================
+   ADMIN NAME
+   ========================================================= */
+
+.manage-admin-name {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  min-width: 180px;
+}
+
+
+/* =========================================================
+   ADMIN AVATAR
+   ========================================================= */
+
+.manage-admin-avatar {
+  width: 36px;
+  height: 36px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+
+  background: #dcecdf;
+
+  color: #356847;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.manage-admin-name span {
+  color: #23432f;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   ADMIN ID
+   ========================================================= */
+
+.manage-admin-id {
+  color: #53665a;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   EMAIL
+   ========================================================= */
+
+.manage-admin-email {
+  color: #53665a;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   ROLE
+   ========================================================= */
+
+.manage-admin-role {
+  display: inline-block;
+
+  padding: 5px 9px;
+
+  border-radius: 6px;
+
+  background: #e5f1e8;
+
+  color: #356847;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.manage-admin-status {
+  display: inline-block;
+
+  padding: 5px 10px;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.manage-admin-status.active {
+  background: #dff1e4;
+
+  color: #27713d;
+}
+
+.manage-admin-status.inactive {
+  background: #f4e3e1;
+
+  color: #a0443b;
+}
+
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+
+.manage-admin-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   EDIT BUTTON
+   ========================================================= */
+
+.manage-admin-edit-btn {
+  padding: 7px 12px;
+
+  border: 1px solid #b9d2bd;
+
+  border-radius: 6px;
+
+  background: #ffffff;
+
+  color: #356847;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.manage-admin-edit-btn:hover {
+  background: #eaf4ed;
+
+  border-color: #8fb89a;
+}
+
+
+/* =========================================================
+   STATUS BUTTON
+   ========================================================= */
+
+.manage-admin-status-btn {
+  padding: 7px 12px;
+
+  border: 1px solid #d9b5b0;
+
+  border-radius: 6px;
+
+  background: #ffffff;
+
+  color: #a0443b;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.manage-admin-status-btn:hover {
+  background: #f8e8e6;
+
+  border-color: #d99d96;
+}
+
+
+/* =========================================================
+   ACTIVATE BUTTON
+   ========================================================= */
+
+.manage-admin-status-btn.activate {
+  border-color: #b9d2bd;
+
+  color: #356847;
+}
+
+.manage-admin-status-btn.activate:hover {
+  background: #eaf4ed;
+
+  border-color: #8fb89a;
+}
+
+
+/* =========================================================
+   EMPTY TABLE
+   ========================================================= */
+
+.manage-admin-empty {
+  padding: 40px 20px !important;
+
+  color: #7a8b80 !important;
+
+  text-align: center;
+
+  font-size: 14px !important;
+}
+
+
+/* =========================================================
+   FORM CONTAINER
+   ========================================================= */
+
+.manage-admin-form-container {
+  width: 100%;
+
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  padding: 28px;
+
+  background: #f3f8f4;
+
+  border: 1px solid #d8e7dc;
+
+  border-radius: 12px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   FORM HEADER
+   ========================================================= */
+
+.manage-admin-form-header {
+  margin-bottom: 18px;
+}
+
+.manage-admin-form-header h2 {
+  margin: 0 0 6px;
+
+  color: #183c28;
+
+  font-size: 22px;
+
+  font-weight: 700;
+}
+
+.manage-admin-form-header p {
+  margin: 0;
+
+  color: #6b7d71;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   BACK BUTTON
+   ========================================================= */
+
+.manage-admin-back-btn {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  margin-bottom: 24px;
+
+  padding: 9px 14px;
+
+  border: 1px solid #c9ddce;
+
+  border-radius: 7px;
+
+  background: #ffffff;
+
+  color: #2f6f46;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.manage-admin-back-btn:hover {
+  background: #eaf4ed;
+
+  border-color: #aecaaf;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.manage-admin-form {
+  width: 100%;
+}
+
+.manage-admin-form-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 20px;
+}
+
+
+/* =========================================================
+   FORM GROUP
+   ========================================================= */
+
+.manage-admin-form-group {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.manage-admin-form-group label {
+  color: #294936;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   FORM INPUTS
+   ========================================================= */
+
+.manage-admin-form-group input,
+.manage-admin-form-group select {
+  width: 100%;
+
+  height: 44px;
+
+  padding: 0 12px;
+
+  border: 1px solid #cbdccf;
+
+  border-radius: 7px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #263d2e;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  box-sizing: border-box;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.manage-admin-form-group input::placeholder {
+  color: #9aa99f;
+}
+
+.manage-admin-form-group input:focus,
+.manage-admin-form-group select:focus {
+  border-color: #5b936b;
+
+  box-shadow:
+    0 0 0 3px rgba(91, 147, 107, 0.12);
+}
+
+
+/* =========================================================
+   FORM ERROR
+   ========================================================= */
+
+.manage-admin-form-error {
+  color: #c0392b;
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   FORM ACTIONS
+   ========================================================= */
+
+.manage-admin-form-actions {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 12px;
+
+  margin-top: 28px;
+
+  padding-top: 20px;
+
+  border-top: 1px solid #dce8df;
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+   ========================================================= */
+
+.manage-admin-submit-btn {
+  padding: 11px 22px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background: #2f6f46;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.manage-admin-submit-btn:hover {
+  background: #255b39;
+
+  transform: translateY(-1px);
+}
+
+.manage-admin-submit-btn:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   RESPONSIVE - 900px
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .manage-admin-table {
+    min-width: 800px;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE - 768px
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .manage-admin-page {
+    padding: 18px;
+  }
+
+  .manage-admin-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .manage-admin-add-btn {
+    width: 100%;
+  }
+
+  .manage-admin-card-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .manage-admin-filter {
+    padding: 16px;
+  }
+
+  .manage-admin-search {
+    max-width: 100%;
+  }
+
+  .manage-admin-form-container {
+    padding: 20px;
+  }
+
+  .manage-admin-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .manage-admin-form-actions {
+    flex-direction: column;
+  }
+
+  .manage-admin-submit-btn {
+    width: 100%;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE - 480px
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .manage-admin-page {
+    padding: 14px;
+  }
+
+  .manage-admin-header h1 {
+    font-size: 23px;
+  }
+
+  .manage-admin-subtitle {
+    font-size: 13px;
+  }
+
+  .manage-admin-card-header {
+    padding: 18px;
+  }
+
+  .manage-admin-filter {
+    padding: 14px;
+  }
+
+  .manage-admin-form-container {
+    padding: 16px;
+  }
+
+  .manage-admin-form-header h2 {
+    font-size: 19px;
+  }
+
+  .manage-admin-table th,
+  .manage-admin-table td {
+    padding: 12px;
+  }
+
+  .manage-admin-actions {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+}

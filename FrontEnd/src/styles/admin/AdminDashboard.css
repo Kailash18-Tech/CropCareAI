@@ -1,0 +1,629 @@
+/* =========================================================
+   CropCare AI
+   Admin Dashboard
+========================================================= */
+
+/* =========================================================
+   DASHBOARD
+========================================================= */
+
+.admin-dashboard {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   DASHBOARD HEADER
+========================================================= */
+
+.admin-dashboard-header {
+  margin-bottom: var(--space-lg);
+}
+
+.admin-dashboard-eyebrow {
+  display: inline-block;
+  margin-bottom: var(--space-xs);
+
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  color: var(--color-primary);
+}
+
+.admin-dashboard-header h1 {
+  margin: 0;
+
+  font-size: clamp(
+    var(--fs-xl),
+    2.5vw,
+    32px
+  );
+
+  font-weight: var(--fw-bold);
+  color: var(--color-text);
+}
+
+.admin-dashboard-header p {
+  margin: var(--space-xs) 0 0;
+
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+}
+
+/* =========================================================
+   COMMON SECTION
+========================================================= */
+
+.admin-dashboard-section {
+  margin-top: var(--space-lg);
+}
+
+.admin-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: var(--space-md);
+}
+
+.admin-section-header h2 {
+  margin: 0;
+
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
+
+  color: var(--color-text);
+}
+
+.admin-section-header p {
+  margin: 4px 0 0;
+
+  font-size: var(--fs-sm);
+
+  color: var(--color-text-muted);
+}
+
+/* =========================================================
+   STATISTICS GRID
+========================================================= */
+
+.admin-stats-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: var(--space-md);
+}
+
+/* =========================================================
+   STAT CARD
+========================================================= */
+
+.admin-stat-card {
+  min-width: 0;
+
+  padding: var(--space-md);
+
+  background: #eef8f0;
+
+  border: 1px solid #d7eadb;
+
+  border-radius: var(--radius-md);
+
+  box-shadow: var(--shadow-sm);
+
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.admin-stat-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow: var(--shadow-md);
+}
+
+/* =========================================================
+   STAT CARD TOP
+========================================================= */
+
+.admin-stat-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: var(--space-md);
+}
+
+/* =========================================================
+   STAT ICON
+========================================================= */
+
+.admin-stat-icon {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: var(--radius-sm);
+
+  background: var(--color-secondary-light);
+
+  font-size: var(--fs-lg);
+}
+
+/* =========================================================
+   STAT TREND
+========================================================= */
+
+.admin-stat-trend {
+  padding: 4px 8px;
+
+  border-radius: var(--radius-pill);
+
+  background: rgba(39, 125, 67, 0.1);
+
+  color: var(--color-primary);
+
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+}
+
+/* =========================================================
+   STAT VALUE
+========================================================= */
+
+.admin-stat-value {
+  margin-bottom: 3px;
+
+  font-size: 26px;
+
+  font-weight: var(--fw-bold);
+
+  color: var(--color-text);
+}
+
+/* =========================================================
+   STAT TITLE
+========================================================= */
+
+.admin-stat-title {
+  font-size: var(--fs-sm);
+
+  font-weight: var(--fw-bold);
+
+  color: var(--color-text);
+}
+
+/* =========================================================
+   STAT DESCRIPTION
+========================================================= */
+
+.admin-stat-description {
+  margin-top: 4px;
+
+  font-size: var(--fs-xs);
+
+  color: var(--color-text-muted);
+}
+
+/* =========================================================
+   SYSTEM OVERVIEW
+========================================================= */
+
+.admin-overview-card {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: var(--space-lg);
+
+  padding: var(--space-lg);
+
+  background: #eef8f0;
+
+  border: 1px solid #d7eadb;
+
+  border-radius: var(--radius-md);
+
+  box-shadow: var(--shadow-sm);
+
+  margin-top: var(--space-lg);
+}
+
+.admin-overview-content {
+  display: flex;
+
+  align-items: center;
+
+  gap: var(--space-md);
+
+  min-width: 0;
+}
+
+.admin-overview-icon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: var(--radius-md);
+
+  background: var(--color-secondary-light);
+
+  font-size: 25px;
+}
+
+.admin-overview-content h3 {
+  margin: 0;
+
+  font-size: var(--fs-base);
+
+  font-weight: var(--fw-bold);
+
+  color: var(--color-text);
+}
+
+.admin-overview-content p {
+  margin: 5px 0 0;
+
+  max-width: 700px;
+
+  font-size: var(--fs-sm);
+
+  line-height: 1.6;
+
+  color: var(--color-text-muted);
+}
+
+/* =========================================================
+   SYSTEM STATUS
+========================================================= */
+
+.admin-overview-status {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  flex-shrink: 0;
+
+  padding: 7px 12px;
+
+  border-radius: var(--radius-pill);
+
+  background: rgba(39, 125, 67, 0.1);
+
+  color: var(--color-primary);
+
+  font-size: var(--fs-xs);
+
+  font-weight: var(--fw-bold);
+}
+
+.admin-status-dot {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: var(--color-primary);
+}
+
+/* =========================================================
+   QUICK ACTIONS
+========================================================= */
+
+.admin-quick-actions {
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: var(--space-md);
+
+  margin-top: var(--space-lg);
+}
+
+.admin-quick-action-card {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: var(--space-sm);
+
+  padding: var(--space-md);
+
+  border: 1px solid #d7eadb;
+
+  border-radius: var(--radius-md);
+
+  background: #eef8f0;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  box-shadow: var(--shadow-sm);
+
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast),
+    background var(--transition-fast);
+}
+
+.admin-quick-action-card:hover {
+  transform: translateY(-2px);
+
+  background: #e7f5e9;
+
+  box-shadow: var(--shadow-md);
+}
+
+.admin-quick-action-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: var(--radius-sm);
+
+  background: var(--color-secondary-light);
+
+  font-size: var(--fs-lg);
+}
+
+.admin-quick-action-content {
+  flex: 1;
+
+  min-width: 0;
+}
+
+.admin-quick-action-content h3 {
+  margin: 0;
+
+  font-size: var(--fs-sm);
+
+  font-weight: var(--fw-bold);
+
+  color: var(--color-text);
+}
+
+.admin-quick-action-content p {
+  margin: 4px 0 0;
+
+  font-size: var(--fs-xs);
+
+  line-height: 1.4;
+
+  color: var(--color-text-muted);
+}
+
+.admin-quick-action-arrow {
+  flex-shrink: 0;
+
+  font-size: var(--fs-lg);
+
+  color: var(--color-primary);
+
+  transition: transform var(--transition-fast);
+}
+
+.admin-quick-action-card:hover
+.admin-quick-action-arrow {
+  transform: translateX(3px);
+}
+
+/* =========================================================
+   CROPCARE AI FEATURE OVERVIEW
+========================================================= */
+
+.admin-feature-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: var(--space-md);
+}
+
+.admin-feature-card {
+  min-width: 0;
+
+  padding: var(--space-md);
+
+  background: #eef8f0;
+
+  border: 1px solid #d7eadb;
+
+  border-radius: var(--radius-md);
+
+  box-shadow: var(--shadow-sm);
+
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.admin-feature-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow: var(--shadow-md);
+}
+
+/* =========================================================
+   FEATURE CARD TOP
+========================================================= */
+
+.admin-feature-card-top {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: var(--space-md);
+
+  margin-bottom: var(--space-md);
+}
+
+.admin-feature-icon {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: var(--radius-sm);
+
+  background: var(--color-secondary-light);
+
+  font-size: 21px;
+}
+
+.admin-feature-info {
+  min-width: 0;
+}
+
+.admin-feature-info h3 {
+  margin: 0;
+
+  font-size: var(--fs-sm);
+
+  font-weight: var(--fw-bold);
+
+  color: var(--color-text);
+}
+
+.admin-feature-info p {
+  margin: 5px 0 0;
+
+  font-size: var(--fs-xs);
+
+  line-height: 1.5;
+
+  color: var(--color-text-muted);
+}
+
+/* =========================================================
+   FEATURE CARD BOTTOM
+========================================================= */
+
+.admin-feature-bottom {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  padding-top: var(--space-sm);
+
+  border-top: 1px solid #d7eadb;
+}
+
+.admin-feature-value {
+  font-size: 24px;
+
+  font-weight: var(--fw-bold);
+
+  color: var(--color-text);
+}
+
+.admin-feature-label {
+  font-size: var(--fs-xs);
+
+  font-weight: var(--fw-semibold);
+
+  color: var(--color-text-muted);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .admin-stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .admin-quick-actions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .admin-feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 640px) {
+
+  .admin-dashboard-header {
+    margin-bottom: var(--space-md);
+  }
+
+  .admin-dashboard-header h1 {
+    font-size: var(--fs-xl);
+  }
+
+  .admin-dashboard-section {
+    margin-top: var(--space-md);
+  }
+
+  .admin-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-quick-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-overview-card {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    padding: var(--space-md);
+  }
+
+  .admin-overview-status {
+    align-self: flex-start;
+  }
+
+  .admin-overview-content {
+    align-items: flex-start;
+  }
+
+  .admin-section-header h2 {
+    font-size: var(--fs-base);
+  }
+
+  .admin-section-header p {
+    font-size: var(--fs-xs);
+  }
+}

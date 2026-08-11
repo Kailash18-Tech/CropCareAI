@@ -1,0 +1,360 @@
+/* =========================================================
+   CropCare AI
+   Admin Officer Management
+========================================================= */
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.admin-officer-page {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.admin-officer-header {
+  margin-bottom: var(--space-lg);
+}
+
+.admin-officer-eyebrow {
+  display: inline-block;
+  margin-bottom: var(--space-xs);
+
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  color: var(--color-primary);
+}
+
+.admin-officer-header h1 {
+  margin: 0;
+
+  font-size: clamp(var(--fs-xl), 2.5vw, 32px);
+  font-weight: var(--fw-bold);
+
+  color: var(--color-text);
+}
+
+.admin-officer-header p {
+  margin: var(--space-xs) 0 0;
+
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+}
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.admin-officer-section {
+  margin-top: var(--space-lg);
+}
+
+.admin-section-header {
+  margin-bottom: var(--space-md);
+}
+
+.admin-section-header h2 {
+  margin: 0;
+
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
+
+  color: var(--color-text);
+}
+
+.admin-section-header p {
+  margin: 4px 0 0;
+
+  font-size: var(--fs-sm);
+
+  color: var(--color-text-muted);
+}
+
+/* =========================================================
+   FILTER
+========================================================= */
+
+.admin-officer-filter {
+  display: flex;
+  align-items: center;
+
+  padding: 18px;
+
+  background: #eef8f0;
+
+  border: 1px solid #d7eadb;
+  border-radius: var(--radius-md);
+
+  box-shadow: var(--shadow-sm);
+
+  margin-bottom: var(--space-lg);
+}
+
+.admin-officer-filter-group {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+.admin-officer-filter-group label {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-bold);
+
+  color: var(--color-text);
+}
+
+.admin-officer-filter-group select {
+  min-width: 200px;
+
+  padding: 10px 12px;
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+
+  background: #ffffff;
+
+  font-size: var(--fs-sm);
+
+  color: var(--color-text);
+
+  outline: none;
+
+  cursor: pointer;
+
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.admin-officer-filter-group select:focus {
+  border-color: var(--color-primary);
+
+  box-shadow: 0 0 0 3px rgba(39, 125, 67, 0.12);
+}
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.admin-officer-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+
+  background: #eef8f0;
+
+  border: 1px solid #d7eadb;
+  border-radius: var(--radius-md);
+
+  box-shadow: var(--shadow-sm);
+}
+
+.admin-officer-table {
+  width: 100%;
+  min-width: 980px;
+
+  border-collapse: collapse;
+}
+
+.admin-officer-table thead {
+  background: #e3f2e6;
+}
+
+.admin-officer-table th {
+  padding: 14px 16px;
+
+  text-align: left;
+
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+
+  color: var(--color-text);
+
+  white-space: nowrap;
+
+  border-bottom: 1px solid #d7eadb;
+}
+
+.admin-officer-table td {
+  padding: 14px 16px;
+
+  font-size: var(--fs-sm);
+
+  color: var(--color-text);
+
+  border-bottom: 1px solid #d7eadb;
+
+  vertical-align: middle;
+}
+
+.admin-officer-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.admin-officer-table tbody tr {
+  transition: background var(--transition-fast);
+}
+
+.admin-officer-table tbody tr:hover {
+  background: #e7f5e9;
+}
+
+/* =========================================================
+   OFFICER NAME
+========================================================= */
+
+.admin-officer-name {
+  display: flex;
+  align-items: center;
+
+  gap: var(--space-sm);
+
+  font-weight: var(--fw-bold);
+
+  white-space: nowrap;
+}
+
+.admin-officer-avatar {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: var(--radius-sm);
+
+  background: var(--color-secondary-light);
+
+  color: var(--color-primary-dark);
+
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-bold);
+}
+
+.admin-officer-district {
+  font-weight: var(--fw-semibold);
+}
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.admin-officer-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 5px 11px;
+
+  border-radius: var(--radius-pill);
+
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+}
+
+.admin-officer-status.active {
+  background: rgba(39, 125, 67, 0.1);
+  color: var(--color-primary);
+}
+
+.admin-officer-status.pending {
+  background: rgba(217, 153, 32, 0.12);
+  color: #9a6a00;
+}
+
+.admin-officer-status.inactive {
+  background: rgba(180, 60, 60, 0.1);
+  color: #a33a3a;
+}
+
+/* =========================================================
+   REMOVE BUTTON
+========================================================= */
+
+.admin-officer-remove-btn {
+  padding: 7px 14px;
+
+  border: 1px solid #f0b8b8;
+  border-radius: var(--radius-sm);
+
+  background: rgba(220, 53, 69, 0.1);
+
+  color: #b42332;
+
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+
+  cursor: pointer;
+
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.admin-officer-remove-btn:hover {
+  background: rgba(220, 53, 69, 0.18);
+
+  border-color: #e29a9a;
+}
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.admin-officer-empty {
+  padding: var(--space-xl);
+
+  text-align: center;
+
+  color: var(--color-text-muted);
+
+  font-size: var(--fs-sm);
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+  .admin-officer-filter {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .admin-officer-filter-group {
+    width: 100%;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .admin-officer-filter-group select {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .admin-officer-header h1 {
+    font-size: var(--fs-xl);
+  }
+
+  .admin-officer-filter {
+    padding: var(--space-sm);
+  }
+
+  .admin-officer-table-wrapper {
+    border-radius: var(--radius-sm);
+  }
+}

@@ -1,0 +1,458 @@
+/* =========================================================
+   CropCare AI
+   Admin Farmer Management
+========================================================= */
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.admin-farmer-page {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.admin-page-header {
+  margin-bottom: var(--space-lg);
+}
+
+.admin-page-eyebrow {
+  display: inline-block;
+
+  margin-bottom: var(--space-xs);
+
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  color: var(--color-primary);
+}
+
+.admin-page-header h1 {
+  margin: 0;
+
+  font-size: clamp(
+    var(--fs-xl),
+    2.5vw,
+    32px
+  );
+
+  font-weight: var(--fw-bold);
+
+  color: var(--color-text);
+}
+
+.admin-page-header p {
+  margin: var(--space-xs) 0 0;
+
+  font-size: var(--fs-sm);
+
+  color: var(--color-text-muted);
+}
+
+/* =========================================================
+   FARMER SECTION
+========================================================= */
+
+.admin-farmer-section {
+  margin-top: var(--space-lg);
+}
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.admin-section-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: var(--space-md);
+}
+
+.admin-section-header h2 {
+  margin: 0;
+
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
+
+  color: var(--color-text);
+}
+
+.admin-section-header p {
+  margin: 4px 0 0;
+
+  font-size: var(--fs-sm);
+
+  color: var(--color-text-muted);
+}
+
+/* =========================================================
+   DISTRICT FILTER
+========================================================= */
+
+.admin-farmer-filter {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: var(--space-md);
+
+  padding: var(--space-md);
+
+  background: #eef8f0;
+
+  border: 1px solid #d7eadb;
+
+  border-radius: var(--radius-md);
+
+  box-shadow: var(--shadow-sm);
+}
+
+.admin-farmer-filter-left {
+  display: flex;
+
+  align-items: center;
+
+  gap: var(--space-sm);
+
+  min-width: 0;
+}
+
+.admin-farmer-filter-label {
+  font-size: var(--fs-sm);
+
+  font-weight: var(--fw-bold);
+
+  color: var(--color-text);
+
+  white-space: nowrap;
+}
+
+.admin-farmer-district-select {
+  min-width: 220px;
+
+  padding: 10px 12px;
+
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-sm);
+
+  background: var(--color-card);
+
+  color: var(--color-text);
+
+  font-size: var(--fs-sm);
+
+  outline: none;
+
+  cursor: pointer;
+
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.admin-farmer-district-select:focus {
+  border-color: var(--color-primary);
+
+  box-shadow: 0 0 0 3px rgba(39, 125, 67, 0.1);
+}
+
+/* =========================================================
+   FARMER TABLE WRAPPER
+========================================================= */
+
+.admin-farmer-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+
+  background: #eef8f0;
+
+  border: 1px solid #d7eadb;
+
+  border-radius: var(--radius-md);
+
+  box-shadow: var(--shadow-sm);
+}
+
+/* =========================================================
+   FARMER TABLE
+========================================================= */
+
+.admin-farmer-table {
+  width: 100%;
+
+  min-width: 850px;
+
+  border-collapse: collapse;
+}
+
+/* =========================================================
+   TABLE HEADER
+========================================================= */
+
+.admin-farmer-table thead {
+  background: #e4f2e7;
+}
+
+.admin-farmer-table th {
+  padding: 13px var(--space-md);
+
+  text-align: left;
+
+  font-size: var(--fs-xs);
+
+  font-weight: var(--fw-bold);
+
+  color: var(--color-text);
+
+  white-space: nowrap;
+
+  border-bottom: 1px solid #d7eadb;
+}
+
+/* =========================================================
+   TABLE BODY
+========================================================= */
+
+.admin-farmer-table td {
+  padding: 14px var(--space-md);
+
+  font-size: var(--fs-sm);
+
+  color: var(--color-text);
+
+  border-bottom: 1px solid #d7eadb;
+
+  vertical-align: middle;
+}
+
+.admin-farmer-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.admin-farmer-table tbody tr {
+  transition: background var(--transition-fast);
+}
+
+.admin-farmer-table tbody tr:hover {
+  background: #e7f5e9;
+}
+
+/* =========================================================
+   FARMER NAME
+========================================================= */
+
+.admin-farmer-name {
+  display: flex;
+
+  align-items: center;
+
+  gap: var(--space-sm);
+
+  font-weight: var(--fw-bold);
+
+  white-space: nowrap;
+}
+
+.admin-farmer-avatar {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: var(--radius-sm);
+
+  background: var(--color-secondary-light);
+
+  color: var(--color-primary-dark);
+
+  font-size: var(--fs-sm);
+
+  font-weight: var(--fw-bold);
+}
+
+/* =========================================================
+   DISTRICT
+========================================================= */
+
+.admin-farmer-district {
+  font-weight: var(--fw-semibold);
+
+  color: var(--color-text);
+}
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.admin-farmer-status {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: 5px 10px;
+
+  border-radius: var(--radius-pill);
+
+  font-size: var(--fs-xs);
+
+  font-weight: var(--fw-bold);
+}
+
+.admin-farmer-status.active {
+  background: rgba(39, 125, 67, 0.1);
+
+  color: var(--color-primary);
+}
+
+.admin-farmer-status.pending {
+  background: rgba(217, 153, 32, 0.12);
+
+  color: #9a6a00;
+}
+
+.admin-farmer-status.inactive {
+  background: rgba(180, 60, 60, 0.1);
+
+  color: #a33a3a;
+}
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.admin-farmer-empty {
+  padding: var(--space-xl);
+
+  text-align: center;
+
+  color: var(--color-text-muted);
+
+  font-size: var(--fs-sm);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .admin-farmer-filter {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .admin-farmer-filter-left {
+    width: 100%;
+  }
+
+  .admin-farmer-district-select {
+    flex: 1;
+
+    min-width: 0;
+
+    width: 100%;
+  }
+
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 640px) {
+
+  .admin-page-header {
+    margin-bottom: var(--space-md);
+  }
+
+  .admin-page-header h1 {
+    font-size: var(--fs-xl);
+  }
+
+  .admin-farmer-section {
+    margin-top: var(--space-md);
+  }
+
+  .admin-section-header h2 {
+    font-size: var(--fs-base);
+  }
+
+  .admin-section-header p {
+    font-size: var(--fs-xs);
+  }
+
+  .admin-farmer-filter {
+    padding: var(--space-sm);
+  }
+
+  .admin-farmer-filter-left {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: var(--space-xs);
+  }
+
+  .admin-farmer-district-select {
+    width: 100%;
+  }
+
+  .admin-farmer-table-wrapper {
+    border-radius: var(--radius-sm);
+  }
+
+}/* =========================================================
+   REMOVE FARMER BUTTON
+========================================================= */
+
+.admin-farmer-remove-btn {
+  padding: 7px 14px;
+
+  border: 1px solid #f0b8b8;
+  border-radius: var(--radius-sm);
+
+  background: rgba(220, 53, 69, 0.10);
+  color: #b42332;
+
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+
+  cursor: pointer;
+  white-space: nowrap;
+
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.admin-farmer-remove-btn:hover {
+  background: rgba(220, 53, 69, 0.18);
+  border-color: #e29a9a;
+  color: #a51d2a;
+
+  transform: translateY(-1px);
+}
+
+.admin-farmer-remove-btn:active {
+  transform: translateY(0);
+}
