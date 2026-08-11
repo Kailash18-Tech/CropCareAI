@@ -1,0 +1,583 @@
+/* =========================================================
+   CropCare AI
+   Officer - Mandi Monitoring
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.mandi-monitoring-page {
+  width: 100%;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+   ========================================================= */
+
+.mandi-page-header {
+  margin-bottom: var(--space-lg);
+}
+
+.mandi-page-label {
+  margin-bottom: var(--space-xs);
+
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+
+  color: var(--color-primary);
+}
+
+.mandi-page-header h1 {
+  margin: 0;
+
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+
+  color: var(--color-text);
+}
+
+.mandi-page-description {
+  margin-top: var(--space-xs);
+
+  font-size: var(--fs-sm);
+  line-height: 1.6;
+
+  color: var(--color-text-muted);
+}
+
+
+/* =========================================================
+   CONTENT SPACING
+   ========================================================= */
+
+.mandi-content {
+  display: flex;
+  flex-direction: column;
+
+  gap: var(--space-lg);
+}
+
+
+/* =========================================================
+   DISTRICT SELECTION
+   ========================================================= */
+
+.mandi-section-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: var(--space-md);
+
+  padding: var(--space-lg);
+
+  background: var(--color-secondary-light);
+
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-lg);
+
+  box-shadow: var(--shadow-sm);
+}
+
+.mandi-section-header h2 {
+  margin: 0;
+
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
+
+  color: var(--color-text);
+}
+
+.mandi-section-header p {
+  margin-top: var(--space-xs);
+
+  font-size: var(--fs-sm);
+  line-height: 1.5;
+
+  color: var(--color-text-muted);
+}
+
+
+/* =========================================================
+   DISTRICT SELECT
+   ========================================================= */
+
+.mandi-district-select {
+  min-width: 190px;
+
+  padding: 10px 14px;
+
+  background: var(--color-card);
+
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-md);
+
+  color: var(--color-text);
+
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+
+  outline: none;
+
+  cursor: pointer;
+
+  transition: var(--transition-base);
+}
+
+.mandi-district-select:hover {
+  border-color: var(--color-primary-light);
+}
+
+.mandi-district-select:focus {
+  border-color: var(--color-primary);
+}
+
+
+/* =========================================================
+   MANDI STATISTICS
+   ========================================================= */
+
+.mandi-stats-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: var(--space-md);
+}
+
+.mandi-stat-card {
+  display: flex;
+
+  align-items: center;
+
+  gap: var(--space-md);
+
+  padding: var(--space-md);
+
+  background: var(--color-card);
+
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-lg);
+
+  box-shadow: var(--shadow-sm);
+
+  transition: var(--transition-base);
+}
+
+.mandi-stat-card:hover {
+  transform: translateY(-2px);
+
+  border-color: var(--color-primary-light);
+
+  box-shadow: var(--shadow-md);
+}
+
+
+/* =========================================================
+   STAT ICON
+   ========================================================= */
+
+.mandi-stat-icon {
+  width: 48px;
+  height: 48px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: var(--radius-md);
+
+  background: var(--color-secondary-light);
+
+  font-size: 1.35rem;
+}
+
+
+/* =========================================================
+   STAT CONTENT
+   ========================================================= */
+
+.mandi-stat-content {
+  min-width: 0;
+}
+
+.mandi-stat-title {
+  margin: 0;
+
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+
+  color: var(--color-text-muted);
+}
+
+.mandi-stat-value {
+  margin: var(--space-xs) 0;
+
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+
+  color: var(--color-text);
+}
+
+.mandi-stat-description {
+  margin: 0;
+
+  font-size: var(--fs-xs);
+
+  color: var(--color-text-muted);
+}
+
+
+/* =========================================================
+   MANDI TABLE
+   ========================================================= */
+
+.mandi-table-section {
+  overflow: hidden;
+
+  background: var(--color-card);
+
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-lg);
+
+  box-shadow: var(--shadow-sm);
+}
+
+.mandi-table-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: var(--space-md);
+
+  padding: var(--space-lg);
+
+  border-bottom: 1px solid var(--color-border);
+}
+
+.mandi-table-header h2 {
+  margin: 0;
+
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
+
+  color: var(--color-text);
+}
+
+.mandi-table-header p {
+  margin-top: var(--space-xs);
+
+  font-size: var(--fs-sm);
+
+  color: var(--color-text-muted);
+}
+
+.mandi-price-count {
+  padding: 6px 10px;
+
+  background: var(--color-secondary-light);
+
+  border-radius: var(--radius-pill);
+
+  color: var(--color-primary-dark);
+
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+.mandi-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+}
+
+.mandi-table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  min-width: 650px;
+}
+
+.mandi-table th {
+  padding: var(--space-sm) var(--space-lg);
+
+  background: var(--color-secondary-light);
+
+  color: var(--color-text-muted);
+
+  text-align: left;
+
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+}
+
+.mandi-table td {
+  padding: var(--space-md) var(--space-lg);
+
+  border-top: 1px solid var(--color-border);
+
+  color: var(--color-text-muted);
+
+  font-size: var(--fs-sm);
+}
+
+.mandi-table tbody tr {
+  transition: var(--transition-fast);
+}
+
+.mandi-table tbody tr:hover {
+  background: var(--color-secondary-light);
+}
+
+.mandi-name {
+  color: var(--color-text);
+
+  font-weight: var(--fw-semibold);
+}
+
+.mandi-price {
+  color: var(--color-primary-dark);
+
+  font-weight: var(--fw-bold);
+}
+
+
+/* =========================================================
+   MANDI CARDS
+   ========================================================= */
+
+.mandi-cards-section {
+  display: none;
+}
+
+.mandi-cards-header {
+  margin-bottom: var(--space-md);
+}
+
+.mandi-cards-header h2 {
+  margin: 0;
+
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
+
+  color: var(--color-text);
+}
+
+.mandi-cards-header p {
+  margin-top: var(--space-xs);
+
+  font-size: var(--fs-sm);
+
+  color: var(--color-text-muted);
+}
+
+.mandi-cards-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: var(--space-md);
+}
+
+
+/* =========================================================
+   MANDI CARD
+   ========================================================= */
+
+.mandi-card {
+  padding: var(--space-md);
+
+  background: var(--color-card);
+
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-lg);
+
+  box-shadow: var(--shadow-sm);
+
+  transition: var(--transition-base);
+}
+
+.mandi-card:hover {
+  transform: translateY(-2px);
+
+  border-color: var(--color-primary-light);
+
+  box-shadow: var(--shadow-md);
+}
+
+
+/* =========================================================
+   CARD TOP
+   ========================================================= */
+
+.mandi-card-top {
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: var(--space-md);
+
+  padding-bottom: var(--space-md);
+
+  border-bottom: 1px solid var(--color-border);
+}
+
+.mandi-card-label {
+  margin-bottom: var(--space-xs);
+
+  font-size: var(--fs-xs);
+
+  color: var(--color-text-muted);
+}
+
+.mandi-card-name {
+  margin: 0;
+
+  font-size: var(--fs-base);
+  font-weight: var(--fw-bold);
+
+  color: var(--color-text);
+}
+
+.mandi-card-crop {
+  padding: 6px 10px;
+
+  background: var(--color-secondary-light);
+
+  border-radius: var(--radius-pill);
+
+  color: var(--color-primary-dark);
+
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+}
+
+
+/* =========================================================
+   CARD BOTTOM
+   ========================================================= */
+
+.mandi-card-bottom {
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: space-between;
+
+  padding-top: var(--space-md);
+}
+
+.mandi-card-price {
+  color: var(--color-primary-dark);
+
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
+}
+
+.mandi-card-date {
+  text-align: right;
+}
+
+.mandi-card-date span {
+  font-size: var(--fs-xs);
+
+  color: var(--color-text-muted);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .mandi-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+  .mandi-page-header h1 {
+    font-size: var(--fs-lg);
+  }
+
+  .mandi-content {
+    gap: var(--space-md);
+  }
+
+  .mandi-section-header {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    padding: var(--space-md);
+  }
+
+  .mandi-district-select {
+    width: 100%;
+  }
+
+  .mandi-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mandi-table-section {
+    display: none;
+  }
+
+  .mandi-cards-section {
+    display: block;
+  }
+
+  .mandi-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .mandi-page-header {
+    margin-bottom: var(--space-md);
+  }
+
+  .mandi-section-header h2,
+  .mandi-table-header h2,
+  .mandi-cards-header h2 {
+    font-size: var(--fs-base);
+  }
+
+}

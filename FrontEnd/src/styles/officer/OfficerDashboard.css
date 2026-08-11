@@ -1,0 +1,968 @@
+/* =========================================================
+   CropCare AI
+   Officer Dashboard
+   ========================================================= */
+
+
+/* =========================================================
+   DASHBOARD
+   ========================================================= */
+
+.officer-dashboard {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   STATISTICS GRID
+   ========================================================= */
+
+.officer-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+
+/* =========================================================
+   STAT CARD
+   ========================================================= */
+
+.officer-stat-card {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-lg);
+
+  padding: var(--space-md);
+
+  box-shadow: var(--shadow-sm);
+
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.officer-stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+
+/* =========================================================
+   STAT TOP
+   ========================================================= */
+
+.officer-stat-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: var(--space-sm);
+}
+
+
+/* =========================================================
+   STAT ICON
+   ========================================================= */
+
+.officer-stat-icon {
+  width: 42px;
+  height: 42px;
+
+  border-radius: var(--radius-md);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: var(--fs-lg);
+}
+
+
+/* =========================================================
+   STAT ICON COLORS
+   ========================================================= */
+
+.officer-stat-warning {
+  background: rgba(245, 158, 11, 0.12);
+}
+
+.officer-stat-danger {
+  background: rgba(220, 38, 38, 0.12);
+}
+
+.officer-stat-success {
+  background: rgba(34, 197, 94, 0.12);
+}
+
+.officer-stat-info {
+  background: rgba(14, 165, 233, 0.12);
+}
+
+
+/* =========================================================
+   STAT TREND
+   ========================================================= */
+
+.officer-stat-trend {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+
+  padding: 5px 8px;
+
+  border-radius: var(--radius-pill);
+
+  white-space: nowrap;
+}
+
+.officer-trend-up {
+  color: var(--color-success);
+  background: rgba(34, 197, 94, 0.10);
+}
+
+.officer-trend-down {
+  color: var(--color-danger);
+  background: rgba(220, 38, 38, 0.10);
+}
+
+
+/* =========================================================
+   STAT VALUE
+   ========================================================= */
+
+.officer-stat-value {
+  margin-top: var(--space-md);
+
+  font-size: 28px;
+  line-height: 1;
+
+  font-weight: var(--fw-bold);
+
+  color: var(--color-text);
+}
+
+
+/* =========================================================
+   STAT LABEL
+   ========================================================= */
+
+.officer-stat-label {
+  margin-top: var(--space-xs);
+
+  font-size: var(--fs-sm);
+
+  color: var(--color-text-muted);
+
+  font-weight: var(--fw-semibold);
+}
+
+
+/* =========================================================
+   MAIN DASHBOARD GRID
+   ========================================================= */
+
+.officer-dashboard-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.8fr)
+    minmax(300px, 0.9fr);
+
+  gap: var(--space-lg);
+
+  align-items: start;
+}
+
+
+/* =========================================================
+   LEFT / RIGHT COLUMNS
+   ========================================================= */
+
+.officer-dashboard-left,
+.officer-dashboard-right {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: var(--space-lg);
+}
+
+
+/* =========================================================
+   PANEL
+   ========================================================= */
+
+.officer-panel {
+  background: var(--color-card);
+
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-lg);
+
+  padding: var(--space-lg);
+
+  box-shadow: var(--shadow-sm);
+}
+
+
+/* =========================================================
+   PANEL HEADER
+   ========================================================= */
+
+.officer-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: var(--space-md);
+
+  margin-bottom: var(--space-md);
+}
+
+.officer-panel-header h3 {
+  margin: 0;
+
+  font-size: var(--fs-base);
+
+  font-weight: var(--fw-bold);
+
+  color: var(--color-text);
+}
+
+
+/* =========================================================
+   PANEL LINK
+   ========================================================= */
+
+.officer-panel-link {
+  border: none;
+
+  background: transparent;
+
+  color: var(--color-primary);
+
+  font-size: var(--fs-xs);
+
+  font-weight: var(--fw-bold);
+
+  cursor: pointer;
+
+  padding: 4px 0;
+
+  white-space: nowrap;
+}
+
+.officer-panel-link:hover {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+}
+
+
+/* =========================================================
+   DISEASE MAP
+   ========================================================= */
+
+.officer-map-card {
+  position: relative;
+
+  width: 100%;
+  height: 300px;
+
+  border-radius: var(--radius-md);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(34, 197, 94, 0.08),
+      rgba(21, 42, 30, 0.04)
+    );
+
+  border: 1px solid var(--color-border);
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   MAP DECORATION
+   ========================================================= */
+
+.officer-map-card::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.035) 1px,
+      transparent 1px
+    );
+
+  background-size: 35px 35px;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   MAP PINS
+   ========================================================= */
+
+.officer-map-pin {
+  position: absolute;
+
+  width: 16px;
+  height: 16px;
+
+  border-radius: 50%;
+
+  border: 3px solid rgba(255, 255, 255, 0.9);
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+
+  z-index: 2;
+}
+
+.officer-map-pin::after {
+  content: "";
+
+  position: absolute;
+
+  inset: -7px;
+
+  border-radius: 50%;
+
+  opacity: 0.2;
+}
+
+
+/* =========================================================
+   MAP PIN COLORS
+   ========================================================= */
+
+.officer-pin-danger {
+  background: var(--color-danger);
+}
+
+.officer-pin-danger::after {
+  background: var(--color-danger);
+}
+
+.officer-pin-warning {
+  background: var(--color-warning);
+}
+
+.officer-pin-warning::after {
+  background: var(--color-warning);
+}
+
+.officer-pin-success {
+  background: var(--color-success);
+}
+
+.officer-pin-success::after {
+  background: var(--color-success);
+}
+
+
+/* =========================================================
+   LARGE MAP PIN
+   ========================================================= */
+
+.officer-pin-large {
+  width: 22px;
+  height: 22px;
+}
+
+
+/* =========================================================
+   MAP LEGEND
+   ========================================================= */
+
+.officer-map-legend {
+  position: absolute;
+
+  left: var(--space-md);
+  bottom: var(--space-md);
+
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: var(--space-sm);
+
+  padding: 8px 10px;
+
+  background: rgba(255, 255, 255, 0.88);
+
+  backdrop-filter: blur(8px);
+
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-sm);
+
+  z-index: 3;
+}
+
+.officer-legend-item {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  font-size: var(--fs-xs);
+
+  color: var(--color-text-muted);
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   LEGEND DOTS
+   ========================================================= */
+
+.officer-legend-dot {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  display: inline-block;
+
+  flex-shrink: 0;
+}
+
+.officer-legend-danger {
+  background: var(--color-danger);
+}
+
+.officer-legend-warning {
+  background: var(--color-warning);
+}
+
+.officer-legend-success {
+  background: var(--color-success);
+}
+
+
+/* =========================================================
+   TABLE WRAPPER
+   ========================================================= */
+
+.officer-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-md);
+}
+
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+.officer-table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  min-width: 650px;
+}
+
+.officer-table th {
+  text-align: left;
+
+  padding: 12px 14px;
+
+  background: var(--color-bg);
+
+  color: var(--color-text-muted);
+
+  font-size: var(--fs-xs);
+
+  font-weight: var(--fw-bold);
+
+  border-bottom: 1px solid var(--color-border);
+
+  white-space: nowrap;
+}
+
+.officer-table td {
+  padding: 13px 14px;
+
+  font-size: var(--fs-sm);
+
+  color: var(--color-text);
+
+  border-bottom: 1px solid var(--color-border);
+
+  white-space: nowrap;
+}
+
+.officer-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.officer-table tbody tr:hover {
+  background: rgba(34, 197, 94, 0.035);
+}
+
+
+/* =========================================================
+   NAME CELL
+   ========================================================= */
+
+.officer-name-cell {
+  display: flex;
+  align-items: center;
+
+  gap: var(--space-sm);
+
+  font-weight: var(--fw-semibold);
+}
+
+
+/* =========================================================
+   SMALL AVATAR
+   ========================================================= */
+
+.officer-avatar-small {
+  width: 34px;
+  height: 34px;
+
+  border-radius: 50%;
+
+  background: var(--color-secondary-light);
+
+  color: var(--color-primary-dark);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: var(--fs-xs);
+
+  font-weight: var(--fw-bold);
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   STATUS BADGES
+   ========================================================= */
+
+.officer-status-badge {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 5px 9px;
+
+  border-radius: var(--radius-pill);
+
+  font-size: var(--fs-xs);
+
+  font-weight: var(--fw-bold);
+}
+
+.officer-status-danger {
+  color: var(--color-danger);
+
+  background: rgba(220, 38, 38, 0.10);
+}
+
+.officer-status-warning {
+  color: var(--color-warning);
+
+  background: rgba(245, 158, 11, 0.12);
+}
+
+.officer-status-success {
+  color: var(--color-success);
+
+  background: rgba(34, 197, 94, 0.10);
+}
+
+
+/* =========================================================
+   MANDI INFORMATION CARD
+   ========================================================= */
+
+.officer-mandi-card {
+  cursor: pointer;
+
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.officer-mandi-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow: var(--shadow-md);
+
+  border-color: var(--color-primary-light);
+}
+
+
+/* =========================================================
+   MANDI CONTENT
+   ========================================================= */
+
+.officer-mandi-content {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: var(--space-md);
+
+  padding: var(--space-sm) 0;
+}
+
+
+/* =========================================================
+   MANDI MAIN
+   ========================================================= */
+
+.officer-mandi-main {
+  display: flex;
+  align-items: center;
+
+  gap: var(--space-sm);
+
+  min-width: 0;
+}
+
+.officer-mandi-main > div:last-child {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+}
+
+.officer-mandi-main strong {
+  font-size: var(--fs-sm);
+
+  color: var(--color-text);
+}
+
+.officer-mandi-main span {
+  margin-top: 3px;
+
+  font-size: var(--fs-xs);
+
+  color: var(--color-text-muted);
+}
+
+
+/* =========================================================
+   MANDI ICON
+   ========================================================= */
+
+.officer-mandi-icon {
+  width: 42px;
+  height: 42px;
+
+  border-radius: var(--radius-md);
+
+  background: rgba(34, 197, 94, 0.10);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: var(--fs-lg);
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   MANDI PRICE
+   ========================================================= */
+
+.officer-mandi-price {
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-end;
+
+  text-align: right;
+}
+
+.officer-mandi-price span {
+  font-size: var(--fs-xs);
+
+  color: var(--color-text-muted);
+}
+
+.officer-mandi-price strong {
+  margin-top: 2px;
+
+  font-size: var(--fs-lg);
+
+  color: var(--color-text);
+}
+
+.officer-mandi-price small {
+  margin-top: 2px;
+
+  font-size: var(--fs-xs);
+
+  font-weight: var(--fw-bold);
+}
+
+.officer-mandi-up {
+  color: var(--color-success);
+}
+
+
+/* =========================================================
+   MANDI SUMMARY
+   ========================================================= */
+
+.officer-mandi-summary {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: var(--space-sm);
+
+  margin-top: var(--space-sm);
+
+  padding-top: var(--space-sm);
+
+  border-top: 1px solid var(--color-border);
+}
+
+.officer-mandi-summary div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.officer-mandi-summary span {
+  font-size: var(--fs-xs);
+
+  color: var(--color-text-muted);
+}
+
+.officer-mandi-summary strong {
+  font-size: var(--fs-sm);
+
+  color: var(--color-text);
+}
+
+
+/* =========================================================
+   QUICK ACTIONS
+   ========================================================= */
+
+.officer-quick-action {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: var(--space-sm);
+
+  padding: 12px;
+
+  margin-top: var(--space-sm);
+
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-md);
+
+  background: var(--color-card);
+
+  color: var(--color-text);
+
+  font-size: var(--fs-sm);
+
+  font-weight: var(--fw-semibold);
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.officer-quick-action:hover {
+  background: var(--color-bg);
+
+  border-color: var(--color-primary-light);
+
+  transform: translateX(2px);
+}
+
+
+/* =========================================================
+   QUICK ACTION ICON
+   ========================================================= */
+
+.officer-quick-icon {
+  width: 38px;
+  height: 38px;
+
+  border-radius: var(--radius-sm);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: var(--fs-lg);
+
+  flex-shrink: 0;
+}
+
+.officer-quick-primary {
+  background: rgba(34, 197, 94, 0.10);
+}
+
+.officer-quick-info {
+  background: rgba(14, 165, 233, 0.10);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  .officer-stat-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .officer-dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .officer-dashboard-right {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    align-items: start;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL TABLET
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+  .officer-dashboard-right {
+    grid-template-columns: 1fr;
+  }
+
+  .officer-map-card {
+    height: 280px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+  .officer-stat-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .officer-panel {
+    padding: var(--space-md);
+  }
+
+  .officer-panel-header {
+    align-items: flex-start;
+  }
+
+  .officer-panel-header h3 {
+    font-size: var(--fs-sm);
+  }
+
+  .officer-map-card {
+    height: 240px;
+  }
+
+  .officer-map-legend {
+    left: var(--space-sm);
+    right: var(--space-sm);
+    bottom: var(--space-sm);
+
+    gap: 7px;
+  }
+
+  .officer-mandi-content {
+    align-items: flex-start;
+  }
+
+  .officer-mandi-price strong {
+    font-size: var(--fs-base);
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .officer-stat-card {
+    padding: var(--space-sm);
+  }
+
+  .officer-stat-value {
+    font-size: 24px;
+  }
+
+  .officer-map-card {
+    height: 210px;
+  }
+
+  .officer-mandi-content {
+    flex-direction: column;
+  }
+
+  .officer-mandi-price {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .officer-mandi-summary {
+    grid-template-columns: 1fr;
+  }
+
+}

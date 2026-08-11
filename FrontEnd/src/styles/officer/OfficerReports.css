@@ -1,0 +1,667 @@
+/* =========================================================
+   CropCare AI — Officer
+   Crop Scan Reports
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.officer-reports-page {
+  width: 100%;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+   ========================================================= */
+
+.officer-reports-header {
+  margin-bottom: var(--space-lg);
+}
+
+.officer-reports-label {
+  margin: 0 0 var(--space-xs);
+
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+
+  color: var(--color-primary);
+
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.officer-reports-header h1 {
+  margin: 0;
+
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+
+  color: var(--color-text);
+}
+
+.officer-reports-description {
+  margin: var(--space-xs) 0 0;
+
+  font-size: var(--fs-sm);
+  line-height: 1.5;
+
+  color: var(--color-text-muted);
+}
+
+
+/* =========================================================
+   SECTION SPACING
+   ========================================================= */
+
+.officer-reports-section {
+  margin-bottom: var(--space-lg);
+}
+
+
+/* =========================================================
+   REPORT STATISTICS
+   ========================================================= */
+
+.officer-report-stats {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: var(--space-md);
+}
+
+
+/* =========================================================
+   STAT CARD
+   ========================================================= */
+
+.officer-report-stat-card {
+  display: flex;
+  align-items: center;
+
+  gap: var(--space-md);
+
+  padding: var(--space-lg);
+
+  background: var(--color-secondary-light);
+
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-lg);
+
+  box-shadow: var(--shadow-sm);
+
+  transition: var(--transition-base);
+}
+
+.officer-report-stat-card:hover {
+  transform: translateY(-2px);
+
+  border-color: var(--color-primary-light);
+
+  box-shadow: var(--shadow-md);
+}
+
+
+/* =========================================================
+   STAT ICON
+   ========================================================= */
+
+.officer-report-stat-icon {
+  width: 50px;
+  height: 50px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: var(--radius-md);
+
+  background: var(--color-card);
+
+  font-size: 1.4rem;
+}
+
+
+/* =========================================================
+   STAT CONTENT
+   ========================================================= */
+
+.officer-report-stat-content {
+  min-width: 0;
+}
+
+.officer-report-stat-title {
+  margin: 0;
+
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+
+  color: var(--color-text-muted);
+}
+
+.officer-report-stat-value {
+  margin: 2px 0;
+
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+
+  color: var(--color-primary-dark);
+}
+
+.officer-report-stat-description {
+  margin: 0;
+
+  font-size: var(--fs-xs);
+
+  color: var(--color-text-muted);
+}
+
+
+/* =========================================================
+   FILTER SECTION
+   ========================================================= */
+
+.officer-report-filters {
+  padding: var(--space-lg);
+
+  background: var(--color-card);
+
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-lg);
+
+  box-shadow: var(--shadow-sm);
+}
+
+
+/* =========================================================
+   FILTER HEADER
+   ========================================================= */
+
+.officer-report-filter-header {
+  margin-bottom: var(--space-md);
+}
+
+.officer-report-filter-header h2 {
+  margin: 0;
+
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
+
+  color: var(--color-text);
+}
+
+.officer-report-filter-header p {
+  margin: var(--space-xs) 0 0;
+
+  font-size: var(--fs-sm);
+
+  color: var(--color-text-muted);
+}
+
+
+/* =========================================================
+   FILTER GRID
+   ========================================================= */
+
+.officer-report-filter-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: var(--space-md);
+}
+
+
+/* =========================================================
+   FILTER GROUP
+   ========================================================= */
+
+.officer-report-filter-group {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: var(--space-xs);
+}
+
+.officer-report-filter-group label {
+  font-size: var(--fs-xs);
+
+  font-weight: var(--fw-semibold);
+
+  color: var(--color-text);
+}
+
+
+/* =========================================================
+   FILTER SELECT
+   ========================================================= */
+
+.officer-report-filter-group select {
+  width: 100%;
+
+  min-height: 42px;
+
+  padding: 9px 12px;
+
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-md);
+
+  background: var(--color-bg);
+
+  color: var(--color-text);
+
+  font-family: var(--font-family);
+
+  font-size: var(--fs-sm);
+
+  outline: none;
+
+  cursor: pointer;
+
+  transition: var(--transition-fast);
+}
+
+.officer-report-filter-group select:hover {
+  border-color: var(--color-primary-light);
+}
+
+.officer-report-filter-group select:focus {
+  border-color: var(--color-primary);
+
+  box-shadow:
+    0 0 0 2px var(--color-secondary-light);
+}
+
+
+/* =========================================================
+   REPORT TABLE SECTION
+   ========================================================= */
+
+.officer-report-table-section {
+  padding: var(--space-lg);
+
+  background: var(--color-card);
+
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-lg);
+
+  box-shadow: var(--shadow-sm);
+}
+
+
+/* =========================================================
+   TABLE HEADER
+   ========================================================= */
+
+.officer-report-table-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: var(--space-md);
+
+  margin-bottom: var(--space-md);
+}
+
+.officer-report-table-header h2 {
+  margin: 0;
+
+  font-size: var(--fs-lg);
+
+  font-weight: var(--fw-bold);
+
+  color: var(--color-text);
+}
+
+.officer-report-table-header p {
+  margin: var(--space-xs) 0 0;
+
+  font-size: var(--fs-sm);
+
+  line-height: 1.5;
+
+  color: var(--color-text-muted);
+}
+
+
+/* =========================================================
+   REPORT COUNT
+   ========================================================= */
+
+.officer-report-count {
+  flex-shrink: 0;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 6px 12px;
+
+  border-radius: var(--radius-pill);
+
+  background: var(--color-secondary-light);
+
+  color: var(--color-primary-dark);
+
+  font-size: var(--fs-xs);
+
+  font-weight: var(--fw-semibold);
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   TABLE WRAPPER
+   ========================================================= */
+
+.officer-report-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-md);
+}
+
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+.officer-report-table {
+  width: 100%;
+
+  min-width: 900px;
+
+  border-collapse: collapse;
+
+  background: var(--color-card);
+}
+
+
+/* =========================================================
+   TABLE HEADER
+   ========================================================= */
+
+.officer-report-table thead {
+  background: var(--color-secondary-light);
+}
+
+.officer-report-table th {
+  padding: 12px 14px;
+
+  text-align: left;
+
+  font-size: var(--fs-xs);
+
+  font-weight: var(--fw-semibold);
+
+  color: var(--color-text);
+
+  white-space: nowrap;
+
+  border-bottom: 1px solid var(--color-border);
+}
+
+
+/* =========================================================
+   TABLE BODY
+   ========================================================= */
+
+.officer-report-table td {
+  padding: 13px 14px;
+
+  font-size: var(--fs-sm);
+
+  color: var(--color-text-muted);
+
+  border-bottom: 1px solid var(--color-border);
+
+  vertical-align: middle;
+}
+
+.officer-report-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.officer-report-table tbody tr {
+  transition: var(--transition-fast);
+}
+
+.officer-report-table tbody tr:hover {
+  background: var(--color-bg);
+}
+
+
+/* =========================================================
+   FARMER / REPORT NAME
+   ========================================================= */
+
+.officer-report-name {
+  font-size: var(--fs-sm);
+
+  font-weight: var(--fw-semibold);
+
+  color: var(--color-text);
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   DISEASE STATUS
+   ========================================================= */
+
+.officer-report-disease,
+.officer-report-healthy {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: 5px 10px;
+
+  border-radius: var(--radius-pill);
+
+  font-size: var(--fs-xs);
+
+  font-weight: var(--fw-semibold);
+
+  white-space: nowrap;
+}
+
+
+/* Disease detected */
+
+.officer-report-disease {
+  background: var(--color-warning-bg);
+
+  color: var(--color-warning);
+}
+
+
+/* Healthy */
+
+.officer-report-healthy {
+  background: var(--color-success-bg);
+
+  color: var(--color-success);
+}
+
+
+/* =========================================================
+   REPORT STATUS
+   ========================================================= */
+
+.officer-report-status {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: 5px 10px;
+
+  border-radius: var(--radius-pill);
+
+  background: var(--color-success-bg);
+
+  color: var(--color-success);
+
+  font-size: var(--fs-xs);
+
+  font-weight: var(--fw-semibold);
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   DOWNLOAD BUTTON
+   ========================================================= */
+
+.officer-report-download-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 7px 12px;
+
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-md);
+
+  background: var(--color-secondary-light);
+
+  color: var(--color-primary-dark);
+
+  font-size: var(--fs-xs);
+
+  font-weight: var(--fw-semibold);
+
+  white-space: nowrap;
+
+  transition: var(--transition-base);
+}
+
+.officer-report-download-button:hover {
+  background: var(--color-secondary);
+
+  border-color: var(--color-secondary);
+
+  color: var(--color-primary-dark);
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.officer-report-empty {
+  padding: var(--space-xl) !important;
+
+  text-align: center;
+
+  color: var(--color-text-muted) !important;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .officer-report-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .officer-report-filter-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+  .officer-reports-header {
+    margin-bottom: var(--space-md);
+  }
+
+  .officer-reports-header h1 {
+    font-size: var(--fs-lg);
+  }
+
+  .officer-report-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .officer-report-filters,
+  .officer-report-table-section {
+    padding: var(--space-md);
+  }
+
+  .officer-report-filter-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .officer-report-table-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .officer-report-count {
+    align-self: flex-start;
+  }
+
+  .officer-report-stat-card {
+    padding: var(--space-md);
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .officer-reports-header h1 {
+    font-size: var(--fs-lg);
+  }
+
+  .officer-report-filter-header h2,
+  .officer-report-table-header h2 {
+    font-size: var(--fs-base);
+  }
+
+  .officer-report-filter-header p,
+  .officer-report-table-header p {
+    font-size: var(--fs-xs);
+  }
+
+}

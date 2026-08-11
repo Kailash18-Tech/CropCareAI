@@ -1,0 +1,321 @@
+
+/* =========================================================
+   CropCare AI
+   Officer Topbar
+========================================================= */
+
+/* =========================================================
+   TOPBAR
+========================================================= */
+
+.officer-topbar {
+  position: sticky;
+
+  top: 0;
+
+  z-index: 50;
+
+  /* Slightly shorter than normal */
+  height: 60px;
+
+  background: rgba(255, 255, 255, 0.75);
+
+  backdrop-filter: blur(14px) saturate(160%);
+
+  border-bottom: 1px solid var(--color-border);
+
+  padding: 5px var(--space-lg);
+
+  display: flex;
+
+  align-items: center;
+
+  gap: var(--space-md);
+}
+
+
+/* =========================================================
+   PAGE TITLE AREA
+========================================================= */
+
+.officer-top-mid {
+  flex: 1;
+
+  min-width: 0;
+}
+
+.officer-crumbs {
+  font-size: var(--fs-xs);
+
+  color: var(--color-text-muted);
+
+  font-weight: var(--fw-semibold);
+}
+
+.officer-crumbs strong {
+  color: var(--color-text);
+}
+
+.officer-topbar h1 {
+  margin: 1px 0 0;
+
+  font-size: var(--fs-lg);
+
+  font-weight: var(--fw-bold);
+
+  color: var(--color-text);
+}
+
+
+/* =========================================================
+   TOPBAR RIGHT
+========================================================= */
+
+.officer-top-right {
+  display: flex;
+
+  align-items: center;
+
+  gap: var(--space-sm);
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   NOTIFICATION BUTTON
+========================================================= */
+
+.officer-icon-chip {
+  width: 40px;
+
+  height: 40px;
+
+  border-radius: var(--radius-sm);
+
+  background: var(--color-card);
+
+  border: 1px solid var(--color-border);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  position: relative;
+
+  cursor: pointer;
+
+  text-decoration: none;
+
+  font-size: 18px;
+
+  line-height: 1;
+
+  transition:
+    background var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.officer-icon-chip:hover {
+  box-shadow: var(--shadow-sm);
+}
+
+
+/* =========================================================
+   NOTIFICATION DOT
+========================================================= */
+
+.officer-notification-dot {
+  position: absolute;
+
+  top: 6px;
+
+  right: 6px;
+
+  width: 8px;
+
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: var(--color-danger);
+
+  border: 2px solid var(--color-card);
+}
+
+
+/* =========================================================
+   PROFILE
+========================================================= */
+
+.officer-profile-chip {
+  display: flex;
+
+  align-items: center;
+
+  gap: var(--space-sm);
+
+  flex-shrink: 0;
+
+  text-decoration: none;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   PROFILE AVATAR
+========================================================= */
+
+.officer-profile-avatar {
+  width: 38px;
+
+  height: 38px;
+
+  border-radius: var(--radius-sm);
+
+  background: var(--color-secondary-light);
+
+  color: var(--color-primary-dark);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-weight: var(--fw-bold);
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   PROFILE INFORMATION
+========================================================= */
+
+.officer-profile-info {
+  display: flex;
+
+  flex-direction: column;
+
+  line-height: 1.2;
+}
+
+.officer-profile-name {
+  font-size: var(--fs-sm);
+
+  font-weight: var(--fw-bold);
+
+  color: var(--color-text);
+}
+
+.officer-profile-role {
+  font-size: var(--fs-xs);
+
+  color: var(--color-text-muted);
+}
+
+
+/* =========================================================
+   MOBILE HAMBURGER
+========================================================= */
+
+.officer-hamburger-btn {
+  display: none;
+
+  width: 40px;
+
+  height: 40px;
+
+  border-radius: var(--radius-sm);
+
+  border: 1px solid var(--color-border);
+
+  background: var(--color-card);
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-direction: column;
+
+  gap: var(--space-xs);
+
+  cursor: pointer;
+
+  flex-shrink: 0;
+}
+
+.officer-hamburger-btn span {
+  width: 18px;
+
+  height: 2px;
+
+  background: var(--color-text);
+
+  border-radius: var(--radius-pill);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 980px) {
+
+  .officer-topbar {
+    padding: 5px var(--space-md);
+  }
+
+  .officer-hamburger-btn {
+    display: flex;
+  }
+
+  .officer-profile-info {
+    display: none;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 640px) {
+
+  .officer-topbar {
+    height: 56px;
+
+    padding: 4px var(--space-md);
+
+    gap: var(--space-sm);
+  }
+
+  .officer-topbar h1 {
+    font-size: var(--fs-base);
+  }
+
+  .officer-crumbs {
+    font-size: var(--fs-xs);
+  }
+
+  .officer-top-right {
+    gap: var(--space-xs);
+  }
+
+  .officer-icon-chip {
+    width: 38px;
+
+    height: 38px;
+  }
+
+  .officer-profile-avatar {
+    width: 38px;
+
+    height: 38px;
+  }
+}
+

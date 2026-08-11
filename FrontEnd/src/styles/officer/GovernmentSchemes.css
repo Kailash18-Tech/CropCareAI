@@ -1,0 +1,572 @@
+/* =========================================================
+   CropCare AI — Officer
+   Scheme Management
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.government-schemes-page {
+  width: 100%;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+   ========================================================= */
+
+.government-schemes-header {
+  margin-bottom: var(--space-lg);
+}
+
+.government-schemes-header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+.government-schemes-label {
+  margin: 0 0 var(--space-xs);
+
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+
+  color: var(--color-primary);
+
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.government-schemes-header h1 {
+  margin: 0;
+
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+
+  color: var(--color-text);
+}
+
+.government-schemes-description {
+  margin: var(--space-xs) 0 0;
+
+  font-size: var(--fs-sm);
+  line-height: 1.5;
+
+  color: var(--color-text-muted);
+}
+
+
+/* =========================================================
+   ADD SCHEME BUTTON
+   ========================================================= */
+
+.add-scheme-button {
+  flex-shrink: 0;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 16px;
+
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-md);
+
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+
+  cursor: pointer;
+
+  transition: var(--transition-base);
+}
+
+.add-scheme-button:hover {
+  background: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   TABLE CONTAINER
+   ========================================================= */
+
+.scheme-table-container {
+  width: 100%;
+
+  padding: var(--space-lg);
+
+  background: var(--color-card);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+
+  box-shadow: var(--shadow-sm);
+}
+
+
+/* =========================================================
+   TABLE HEADER
+   ========================================================= */
+
+.scheme-table-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: var(--space-md);
+
+  margin-bottom: var(--space-md);
+}
+
+.scheme-table-header h2 {
+  margin: 0;
+
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
+
+  color: var(--color-text);
+}
+
+.scheme-table-header p {
+  margin: var(--space-xs) 0 0;
+
+  font-size: var(--fs-sm);
+  line-height: 1.5;
+
+  color: var(--color-text-muted);
+}
+
+.scheme-count {
+  flex-shrink: 0;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 6px 12px;
+
+  border-radius: var(--radius-pill);
+
+  background: var(--color-secondary-light);
+  color: var(--color-primary-dark);
+
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+}
+
+
+/* =========================================================
+   TABLE WRAPPER
+   ========================================================= */
+
+.scheme-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+.scheme-table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  background: var(--color-card);
+
+  min-width: 650px;
+}
+
+
+/* =========================================================
+   TABLE HEADER
+   ========================================================= */
+
+.scheme-table thead {
+  background: var(--color-secondary-light);
+}
+
+.scheme-table th {
+  padding: 12px 16px;
+
+  border-bottom: 1px solid var(--color-border);
+
+  text-align: left;
+
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+
+  color: var(--color-primary-dark);
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   TABLE BODY
+   ========================================================= */
+
+.scheme-table td {
+  padding: 14px 16px;
+
+  border-bottom: 1px solid var(--color-border);
+
+  font-size: var(--fs-sm);
+
+  color: var(--color-text-muted);
+
+  vertical-align: middle;
+}
+
+.scheme-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.scheme-table tbody tr {
+  transition: var(--transition-fast);
+}
+
+.scheme-table tbody tr:hover {
+  background: var(--color-secondary-light);
+}
+
+
+/* =========================================================
+   SCHEME NAME
+   ========================================================= */
+
+.scheme-name {
+  display: block;
+
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+
+  color: var(--color-text);
+}
+
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.scheme-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 5px 10px;
+
+  border-radius: var(--radius-pill);
+
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+
+  white-space: nowrap;
+}
+
+.scheme-status.active {
+  background: var(--color-success-bg);
+  color: var(--color-success);
+}
+
+.scheme-status.inactive {
+  background: var(--color-danger-bg);
+  color: var(--color-danger);
+}
+
+
+/* =========================================================
+   BACK BUTTON
+   ========================================================= */
+
+.scheme-back-button {
+  display: inline-flex;
+  align-items: center;
+
+  margin-bottom: var(--space-md);
+
+  color: var(--color-primary-dark);
+
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+
+  cursor: pointer;
+
+  transition: var(--transition-fast);
+}
+
+.scheme-back-button:hover {
+  color: var(--color-primary);
+}
+
+
+/* =========================================================
+   FORM CARD
+   ========================================================= */
+
+.scheme-form-card {
+  width: 100%;
+  max-width: 850px;
+
+  padding: var(--space-lg);
+
+  background: var(--color-card);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+
+  box-shadow: var(--shadow-sm);
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.scheme-form-card form {
+  display: flex;
+  flex-direction: column;
+
+  gap: var(--space-md);
+}
+
+
+/* =========================================================
+   FORM GROUP
+   ========================================================= */
+
+.scheme-form-group {
+  display: flex;
+  flex-direction: column;
+
+  gap: var(--space-xs);
+}
+
+.scheme-form-group label {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+
+  color: var(--color-text);
+}
+
+
+/* =========================================================
+   FORM INPUTS
+   ========================================================= */
+
+.scheme-form-group input,
+.scheme-form-group textarea,
+.scheme-form-group select {
+  width: 100%;
+
+  padding: 10px 12px;
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+
+  background: var(--color-bg);
+  color: var(--color-text);
+
+  font-family: var(--font-family);
+  font-size: var(--fs-sm);
+
+  outline: none;
+
+  transition: var(--transition-fast);
+}
+
+.scheme-form-group textarea {
+  min-height: 90px;
+
+  resize: vertical;
+}
+
+.scheme-form-group input::placeholder,
+.scheme-form-group textarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+.scheme-form-group input:focus,
+.scheme-form-group textarea:focus,
+.scheme-form-group select:focus {
+  border-color: var(--color-primary);
+
+  box-shadow: 0 0 0 2px var(--color-secondary-light);
+}
+
+
+/* =========================================================
+   FORM ACTIONS
+   ========================================================= */
+
+.scheme-form-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: var(--space-sm);
+
+  margin-top: var(--space-xs);
+
+  padding-top: var(--space-md);
+
+  border-top: 1px solid var(--color-border);
+}
+
+
+/* =========================================================
+   CANCEL BUTTON
+   ========================================================= */
+
+.scheme-cancel-button {
+  padding: 10px 16px;
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+
+  background: var(--color-secondary-light);
+  color: var(--color-primary-dark);
+
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+
+  cursor: pointer;
+
+  transition: var(--transition-base);
+}
+
+.scheme-cancel-button:hover {
+  background: var(--color-secondary);
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+   ========================================================= */
+
+.scheme-submit-button {
+  padding: 10px 16px;
+
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-md);
+
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+
+  cursor: pointer;
+
+  transition: var(--transition-base);
+}
+
+.scheme-submit-button:hover {
+  background: var(--color-primary-dark);
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+  .government-schemes-header-content {
+    align-items: flex-start;
+  }
+
+  .scheme-table-container {
+    padding: var(--space-md);
+  }
+
+  .scheme-table-header {
+    align-items: flex-start;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+  .government-schemes-header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .add-scheme-button {
+    width: 100%;
+  }
+
+  .scheme-table-container {
+    padding: var(--space-md);
+  }
+
+  .scheme-table-header {
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: var(--space-sm);
+  }
+
+  .scheme-count {
+    align-self: flex-start;
+  }
+
+  .scheme-form-card {
+    padding: var(--space-md);
+  }
+
+  .scheme-form-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .scheme-cancel-button,
+  .scheme-submit-button {
+    width: 100%;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .government-schemes-header h1 {
+    font-size: var(--fs-lg);
+  }
+
+  .scheme-table-container {
+    padding: var(--space-sm);
+  }
+
+  .scheme-table-header h2 {
+    font-size: var(--fs-base);
+  }
+
+  .scheme-form-card {
+    padding: var(--space-md);
+  }
+}

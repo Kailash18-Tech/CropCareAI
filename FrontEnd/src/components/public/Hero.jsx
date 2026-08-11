@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
+import PublicHeader from './PublicHeader';
 
 export default function Hero() {
   return (
+    
     <section className="hero">
       <div className="wrap hero-grid">
 

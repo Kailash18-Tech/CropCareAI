@@ -1,3 +1,4 @@
+
 import { Routes, Route } from "react-router-dom";
 
 import Home from "../pages/public/Home";
@@ -21,11 +22,26 @@ import Profile from "../pages/farmer/Profile";
 import Settings from "../pages/farmer/Settings";
 import Notifications from "../pages/farmer/Notifications";
 
+// Officer
+import OfficerLayout from "../components/officer/layout/OfficerLayout";
+import OfficerDashboard from "../pages/officer/OfficerDashboard";
+import FarmerManagement from "../pages/officer/FarmerManagement";
+import DiseaseMonitoring from "../pages/officer/DiseaseMonitoring";
+import SoilInformation from "../pages/officer/SoilInformation";
+import MandiMonitoring from "../pages/officer/MandiMonitoring";
+import SchemeManagement from "../pages/officer/SchemeManagement";
+import OfficerReports from "../pages/officer/OfficerReports";
+import OfficerProfile from "../pages/officer/OfficerProfile";
+import OfficerNotifications from "../pages/officer/OfficerNotifications";
+import OfficerSettings from "../pages/officer/OfficerSettings";
+
 export default function AppRoutes() {
   return (
     <Routes>
 
-      {/* Public Pages */}
+      {/* =========================
+          PUBLIC PAGES
+      ========================= */}
       <Route path="/" element={<Home />} />
       <Route path="/features" element={<Features />} />
       <Route path="/about" element={<About />} />
@@ -33,10 +49,14 @@ export default function AppRoutes() {
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
 
-      {/* Farmer Pages */}
+
+      {/* =========================
+          FARMER PAGES
+      ========================= */}
       <Route path="/farmer" element={<FarmerLayout />}>
 
         <Route index element={<FarmerDashboard />} />
+
         <Route path="disease" element={<DiseaseDetection />} />
         <Route path="soil" element={<SoilAdvice />} />
         <Route path="mandi" element={<MandiPrices />} />
@@ -51,6 +71,25 @@ export default function AppRoutes() {
 
       </Route>
 
+
+      {/* =========================
+          DISTRICT OFFICER PAGES
+      ========================= */}
+      <Route path="/officer" element={<OfficerLayout />}>
+
+        <Route index element={<OfficerDashboard />} />
+        <Route path="farmers" element={<FarmerManagement />} />
+        <Route path="diseasereports" element={<DiseaseMonitoring />} />
+          <Route path="soilinfo" element={<SoilInformation />} />
+           <Route path="mandi" element={<MandiMonitoring />} />
+            <Route path="schemes" element={<SchemeManagement />} />
+             <Route path="reports" element={<OfficerReports />} />
+             <Route path="profile" element={<OfficerProfile />} />
+            <Route path="notifications" element={<OfficerNotifications />} />
+             <Route path="settings" element={<OfficerSettings />} />
+      </Route>
+
     </Routes>
   );
 }
+
