@@ -411,3 +411,19 @@
     font-size: 1rem;
   }
 }
+
+
+/* =========================================================
+Back to Home
+   ========================================================= */
+.back-home {
+  margin-top: 20px;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  font-weight: var(--fw-semibold);
+  text-decoration: none;
+}
+
+.back-home:hover {
+  color: var(--color-primary);
+}

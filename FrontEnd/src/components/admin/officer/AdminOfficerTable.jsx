@@ -1,192 +1,115 @@
-import React, { useState } from "react";
+import React from "react";
 
-export default function AdminOfficerTable({
-  selectedDistrict,
-}) {
-  const [officers, setOfficers] = useState([
-    {
-      id: 1,
-      name: "Arun Kumar",
-      email: "arun.kumar@cropcare.ai",
-      phone: "9876543210",
-      district: "Coimbatore",
-      status: "Active",
-    },
-    {
-      id: 2,
-      name: "Priya S",
-      email: "priya.s@cropcare.ai",
-      phone: "9876543211",
-      district: "Erode",
-      status: "Active",
-    },
-    {
-      id: 3,
-      name: "Ramesh K",
-      email: "ramesh.k@cropcare.ai",
-      phone: "9876543212",
-      district: "Salem",
-      status: "Active",
-    },
-    {
-      id: 4,
-      name: "Divya M",
-      email: "divya.m@cropcare.ai",
-      phone: "9876543213",
-      district: "Tiruppur",
-      status: "Active",
-    },
-    {
-      id: 5,
-      name: "Suresh P",
-      email: "suresh.p@cropcare.ai",
-      phone: "9876543214",
-      district: "Namakkal",
-      status: "Inactive",
-    },
-    {
-      id: 6,
-      name: "Karthik R",
-      email: "karthik.r@cropcare.ai",
-      phone: "9876543215",
-      district: "Karur",
-      status: "Active",
-    },
-    {
-      id: 7,
-      name: "Meena V",
-      email: "meena.v@cropcare.ai",
-      phone: "9876543216",
-      district: "Madurai",
-      status: "Active",
-    },
-    {
-      id: 8,
-      name: "Vijay S",
-      email: "vijay.s@cropcare.ai",
-      phone: "9876543217",
-      district: "Thanjavur",
-      status: "Active",
-    },
-  ]);
-
-  /* =========================
-     FILTER OFFICERS
-  ========================= */
-
-  const filteredOfficers =
-    selectedDistrict === "all"
-      ? officers
-      : officers.filter(
-          (officer) =>
-            officer.district === selectedDistrict
-        );
-
-  /* =========================
-     REMOVE OFFICER
-  ========================= */
-
-  const handleRemove = (id) => {
-    const confirmed = window.confirm(
-      "Are you sure you want to remove this officer?"
-    );
-
-    if (!confirmed) return;
-
-    setOfficers((currentOfficers) =>
-      currentOfficers.filter(
-        (officer) => officer.id !== id
-      )
-    );
-  };
-
+const AdminOfficerTable = ({ officers }) => {
   return (
-    <div className="admin-officer-table-wrapper">
+    <section className="manage-officer-table-section">
 
-      <table className="admin-officer-table">
+      {/* Section Header */}
+      <div className="manage-officer-section-header">
+        <div>
+          <h2>District Officers</h2>
 
-        <thead>
-          <tr>
-            <th>Officer</th>
-            <th>Email</th>
-            <th>Phone</th>
-            <th>District</th>
-            <th>Status</th>
-            <th>Action</th>
-          </tr>
-        </thead>
+          <p>
+            View officers registered on the CropCare AI platform.
+          </p>
+        </div>
+      </div>
 
-        <tbody>
+      {/* Table */}
+      <div className="manage-officer-table-wrapper">
 
-          {filteredOfficers.length > 0 ? (
-            filteredOfficers.map((officer) => (
-              <tr key={officer.id}>
+        <table className="manage-officer-table">
 
-                <td>
-                  <div className="admin-officer-name">
-
-                    <div className="admin-officer-avatar">
-                      {officer.name.charAt(0)}
-                    </div>
-
-                    <span>
-                      {officer.name}
-                    </span>
-
-                  </div>
-                </td>
-
-                <td>
-                  {officer.email}
-                </td>
-
-                <td>
-                  {officer.phone}
-                </td>
-
-                <td>
-                  <span className="admin-officer-district">
-                    {officer.district}
-                  </span>
-                </td>
-
-                <td>
-                  <span
-                    className={`admin-officer-status ${officer.status.toLowerCase()}`}
-                  >
-                    {officer.status}
-                  </span>
-                </td>
-
-                <td>
-                  <button
-                    type="button"
-                    className="admin-officer-remove-btn"
-                    onClick={() =>
-                      handleRemove(officer.id)
-                    }
-                  >
-                    Remove
-                  </button>
-                </td>
-
-              </tr>
-            ))
-          ) : (
+          <thead>
             <tr>
-              <td
-                colSpan="6"
-                className="admin-officer-empty"
-              >
-                No officers found for the selected district.
-              </td>
+              <th>Officer Name</th>
+              <th>Officer ID</th>
+              <th>Email</th>
+              <th>District</th>
+              <th>Status</th>
             </tr>
-          )}
+          </thead>
 
-        </tbody>
+          <tbody>
 
-      </table>
+            {officers.length > 0 ? (
+              officers.map((officer) => (
+                <tr key={officer.id}>
 
-    </div>
+                  {/* Officer Name */}
+                  <td>
+                    <div className="manage-officer-name">
+
+                      <div className="manage-officer-avatar">
+                        {officer.name
+                          .charAt(0)
+                          .toUpperCase()}
+                      </div>
+
+                      <span>
+                        {officer.name}
+                      </span>
+
+                    </div>
+                  </td>
+
+                  {/* Officer ID */}
+                  <td>
+                    <span className="manage-officer-id">
+                      {officer.officerId}
+                    </span>
+                  </td>
+
+                  {/* Email */}
+                  <td>
+                    <span className="manage-officer-email">
+                      {officer.email}
+                    </span>
+                  </td>
+
+                  {/* District */}
+                  <td>
+                    <span className="manage-officer-district">
+                      {officer.district}
+                    </span>
+                  </td>
+
+                  {/* Status */}
+                  <td>
+                    <span
+                      className={`manage-officer-status ${
+                        officer.status === "Active"
+                          ? "active"
+                          : "inactive"
+                      }`}
+                    >
+                      <span className="manage-officer-status-dot"></span>
+
+                      {officer.status}
+                    </span>
+                  </td>
+
+                </tr>
+              ))
+            ) : (
+              <tr>
+                <td
+                  colSpan="5"
+                  className="manage-officer-empty"
+                >
+                  No officers found.
+                </td>
+              </tr>
+            )}
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </section>
   );
-}
+};
+
+export default AdminOfficerTable;

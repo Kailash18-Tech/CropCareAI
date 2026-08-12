@@ -25,7 +25,9 @@ const OfficerDashboard = () => {
             </span>
           </div>
 
-          <div className="officer-stat-value">9</div>
+          <div className="officer-stat-value">
+            9
+          </div>
 
           <div className="officer-stat-label">
             Total labs available
@@ -45,7 +47,9 @@ const OfficerDashboard = () => {
             </span>
           </div>
 
-          <div className="officer-stat-value">31</div>
+          <div className="officer-stat-value">
+            31
+          </div>
 
           <div className="officer-stat-label">
             Active disease cases
@@ -65,7 +69,9 @@ const OfficerDashboard = () => {
             </span>
           </div>
 
-          <div className="officer-stat-value">2,140</div>
+          <div className="officer-stat-value">
+            2,140
+          </div>
 
           <div className="officer-stat-label">
             Registered farmers
@@ -85,7 +91,9 @@ const OfficerDashboard = () => {
             </span>
           </div>
 
-          <div className="officer-stat-value">126</div>
+          <div className="officer-stat-value">
+            126
+          </div>
 
           <div className="officer-stat-label">
             Disease scans this month
@@ -105,13 +113,23 @@ const OfficerDashboard = () => {
         ========================= */}
         <div className="officer-dashboard-left">
 
-          {/* Disease Hotspot Map */}
+          {/* =========================
+              DISEASE HOTSPOT MAP
+          ========================= */}
           <div className="officer-panel">
 
             <div className="officer-panel-header">
-              <h3>Disease hotspot map — Tiruppur district</h3>
+              <h3>
+                Disease hotspot map — Tiruppur district
+              </h3>
 
-              <button className="officer-panel-link">
+              <button
+                type="button"
+                className="officer-panel-link"
+                onClick={() =>
+                  navigate("/officer/diseasereports")
+                }
+              >
                 Open full map
               </button>
             </div>
@@ -120,27 +138,42 @@ const OfficerDashboard = () => {
 
               <div
                 className="officer-map-pin officer-pin-danger"
-                style={{ top: "40px", left: "80px" }}
+                style={{
+                  top: "40px",
+                  left: "80px",
+                }}
               />
 
               <div
                 className="officer-map-pin officer-pin-danger officer-pin-large"
-                style={{ top: "110px", left: "180px" }}
+                style={{
+                  top: "110px",
+                  left: "180px",
+                }}
               />
 
               <div
                 className="officer-map-pin officer-pin-warning"
-                style={{ top: "70px", left: "280px" }}
+                style={{
+                  top: "70px",
+                  left: "280px",
+                }}
               />
 
               <div
                 className="officer-map-pin officer-pin-warning"
-                style={{ top: "160px", left: "340px" }}
+                style={{
+                  top: "160px",
+                  left: "340px",
+                }}
               />
 
               <div
                 className="officer-map-pin officer-pin-success"
-                style={{ top: "190px", left: "120px" }}
+                style={{
+                  top: "190px",
+                  left: "120px",
+                }}
               />
 
               <div className="officer-map-legend">
@@ -163,6 +196,7 @@ const OfficerDashboard = () => {
               </div>
 
             </div>
+
           </div>
 
 
@@ -172,12 +206,24 @@ const OfficerDashboard = () => {
           <div className="officer-panel">
 
             <div className="officer-panel-header">
-              <h3>Recent scans — Tiruppur district</h3>
 
-              <button className="officer-panel-link">
+              <h3>
+                Recent scans — Tiruppur district
+              </h3>
+
+              {/* VIEW ALL SCANS */}
+              <button
+                type="button"
+                className="officer-panel-link"
+                onClick={() =>
+                  navigate("/officer/diseasereports")
+                }
+              >
                 View all scans
               </button>
+
             </div>
+
 
             <div className="officer-table-wrapper">
 
@@ -198,16 +244,23 @@ const OfficerDashboard = () => {
                   <tr>
                     <td>
                       <div className="officer-name-cell">
+
                         <div className="officer-avatar-small">
                           RK
                         </div>
+
                         Ramesh Kumar
+
                       </div>
                     </td>
 
-                    <td>Avinashi</td>
+                    <td>
+                      Avinashi
+                    </td>
 
-                    <td>Tomato</td>
+                    <td>
+                      Tomato
+                    </td>
 
                     <td>
                       <span className="officer-status-badge officer-status-danger">
@@ -215,23 +268,32 @@ const OfficerDashboard = () => {
                       </span>
                     </td>
 
-                    <td>Today</td>
+                    <td>
+                      Today
+                    </td>
                   </tr>
 
 
                   <tr>
                     <td>
                       <div className="officer-name-cell">
+
                         <div className="officer-avatar-small">
                           LP
                         </div>
+
                         Lakshmi P.
+
                       </div>
                     </td>
 
-                    <td>Kangeyam</td>
+                    <td>
+                      Kangeyam
+                    </td>
 
-                    <td>Cotton</td>
+                    <td>
+                      Cotton
+                    </td>
 
                     <td>
                       <span className="officer-status-badge officer-status-warning">
@@ -239,23 +301,32 @@ const OfficerDashboard = () => {
                       </span>
                     </td>
 
-                    <td>Today</td>
+                    <td>
+                      Today
+                    </td>
                   </tr>
 
 
                   <tr>
                     <td>
                       <div className="officer-name-cell">
+
                         <div className="officer-avatar-small">
                           SK
                         </div>
+
                         Suresh Kumar
+
                       </div>
                     </td>
 
-                    <td>Palladam</td>
+                    <td>
+                      Palladam
+                    </td>
 
-                    <td>Maize</td>
+                    <td>
+                      Maize
+                    </td>
 
                     <td>
                       <span className="officer-status-badge officer-status-success">
@@ -263,23 +334,32 @@ const OfficerDashboard = () => {
                       </span>
                     </td>
 
-                    <td>Yesterday</td>
+                    <td>
+                      Yesterday
+                    </td>
                   </tr>
 
 
                   <tr>
                     <td>
                       <div className="officer-name-cell">
+
                         <div className="officer-avatar-small">
                           MS
                         </div>
+
                         Meena S.
+
                       </div>
                     </td>
 
-                    <td>Dharapuram</td>
+                    <td>
+                      Dharapuram
+                    </td>
 
-                    <td>Onion</td>
+                    <td>
+                      Onion
+                    </td>
 
                     <td>
                       <span className="officer-status-badge officer-status-danger">
@@ -287,7 +367,9 @@ const OfficerDashboard = () => {
                       </span>
                     </td>
 
-                    <td>Yesterday</td>
+                    <td>
+                      Yesterday
+                    </td>
                   </tr>
 
                 </tbody>
@@ -306,33 +388,49 @@ const OfficerDashboard = () => {
         ========================= */}
         <div className="officer-dashboard-right">
 
+
           {/* =========================
               MANDI INFORMATION
           ========================= */}
           <div
             className="officer-panel officer-mandi-card"
-            onClick={() => navigate("/officer/mandi")}
+            onClick={() =>
+              navigate("/officer/mandi")
+            }
             role="button"
             tabIndex={0}
             onKeyDown={(event) => {
-              if (event.key === "Enter" || event.key === " ") {
+
+              if (
+                event.key === "Enter" ||
+                event.key === " "
+              ) {
                 navigate("/officer/mandi");
               }
+
             }}
           >
 
             <div className="officer-panel-header">
-              <h3>Mandi information</h3>
+
+              <h3>
+                Mandi information
+              </h3>
 
               <button
+                type="button"
                 className="officer-panel-link"
                 onClick={(event) => {
+
                   event.stopPropagation();
+
                   navigate("/officer/mandi");
+
                 }}
               >
                 View mandi
               </button>
+
             </div>
 
 
@@ -345,11 +443,15 @@ const OfficerDashboard = () => {
                 </div>
 
                 <div>
-                  <strong>Avinashi Mandi</strong>
+
+                  <strong>
+                    Avinashi Mandi
+                  </strong>
 
                   <span>
                     Tiruppur district
                   </span>
+
                 </div>
 
               </div>
@@ -357,7 +459,9 @@ const OfficerDashboard = () => {
 
               <div className="officer-mandi-price">
 
-                <span>Tomato</span>
+                <span>
+                  Tomato
+                </span>
 
                 <strong>
                   ₹1,840
@@ -375,13 +479,28 @@ const OfficerDashboard = () => {
             <div className="officer-mandi-summary">
 
               <div>
-                <span>Active markets</span>
-                <strong>8</strong>
+
+                <span>
+                  Active markets
+                </span>
+
+                <strong>
+                  8
+                </strong>
+
               </div>
 
+
               <div>
-                <span>Today's arrivals</span>
-                <strong>2,840 Q</strong>
+
+                <span>
+                  Today's arrivals
+                </span>
+
+                <strong>
+                  2,840 Q
+                </strong>
+
               </div>
 
             </div>
@@ -395,10 +514,23 @@ const OfficerDashboard = () => {
           <div className="officer-panel">
 
             <div className="officer-panel-header">
-              <h3>Quick actions</h3>
+
+              <h3>
+                Quick actions
+              </h3>
+
             </div>
 
-            <button className="officer-quick-action">
+
+            {/* SEND ALERT */}
+
+            <button
+              type="button"
+              className="officer-quick-action"
+              onClick={() =>
+                navigate("/officer/sendalert")
+              }
+            >
 
               <div className="officer-quick-icon officer-quick-primary">
                 📢
@@ -411,16 +543,56 @@ const OfficerDashboard = () => {
             </button>
 
 
-            <button className="officer-quick-action">
+            {/* VIEW SCHEMES */}
+
+            <button
+              type="button"
+              className="officer-quick-action"
+              onClick={() =>
+                navigate("/officer/schemes")
+              }
+            >
 
               <div className="officer-quick-icon officer-quick-info">
-                🧪
+                📋
               </div>
 
               <span>
-                Review seed lab requests
+                View all schemes
               </span>
 
+            </button>
+
+          </div>
+
+
+          {/* =========================
+              REPORTS
+          ========================= */}
+          <div className="officer-panel officer-reports-card">
+
+            <div className="officer-panel-header">
+
+              <div>
+                <h3>
+                  Reports
+                </h3>
+
+                <p className="officer-panel-description">
+                  Review district reports and analytics.
+                </p>
+              </div>
+
+            </div>
+
+            <button
+              type="button"
+              className="officer-panel-link"
+              onClick={() =>
+                navigate("/officer/reports")
+              }
+            >
+              View all reports
             </button>
 
           </div>

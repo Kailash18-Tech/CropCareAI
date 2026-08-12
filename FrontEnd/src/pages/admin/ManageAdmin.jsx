@@ -39,11 +39,8 @@ const ManageAdmin = () => {
   ===================================================== */
 
   const [showForm, setShowForm] = useState(false);
-
   const [editingAdmin, setEditingAdmin] = useState(null);
-
   const [admins, setAdmins] = useState(initialAdmins);
-
   const [searchTerm, setSearchTerm] = useState("");
 
   /* =====================================================
@@ -68,7 +65,6 @@ const ManageAdmin = () => {
     };
 
     setAdmins((prev) => [...prev, adminWithId]);
-
     setShowForm(false);
   };
 
@@ -87,9 +83,7 @@ const ManageAdmin = () => {
   const handleSaveEdit = (updatedAdmin) => {
     setAdmins((currentAdmins) =>
       currentAdmins.map((admin) =>
-        admin.id === updatedAdmin.id
-          ? updatedAdmin
-          : admin
+        admin.id === updatedAdmin.id ? updatedAdmin : admin
       )
     );
 
@@ -106,10 +100,7 @@ const ManageAdmin = () => {
         admin.id === adminId
           ? {
               ...admin,
-              status:
-                admin.status === "Active"
-                  ? "Inactive"
-                  : "Active",
+              status: admin.status === "Active" ? "Inactive" : "Active",
             }
           : admin
       )
@@ -137,7 +128,6 @@ const ManageAdmin = () => {
 
   return (
     <div className="manage-admin-page">
-
       {/* =================================================
           EDIT ADMIN FORM
       ================================================= */}
@@ -149,7 +139,6 @@ const ManageAdmin = () => {
           onClose={() => setEditingAdmin(null)}
         />
       ) : showForm ? (
-
         /* =================================================
            ADD ADMIN FORM
         ================================================= */
@@ -158,9 +147,7 @@ const ManageAdmin = () => {
           onAddAdmin={handleAddAdmin}
           onClose={() => setShowForm(false)}
         />
-
       ) : (
-
         /* =================================================
            MANAGE ADMINS PAGE
         ================================================= */
@@ -168,18 +155,13 @@ const ManageAdmin = () => {
         <>
           {/* PAGE HEADER */}
           <div className="manage-admin-header">
-
             <div className="manage-admin-title">
-
-              <h1>
-                Manage Admins
-              </h1>
+              <h1>Manage Admins</h1>
 
               <p>
-                Manage administrator accounts and access
-                across the CropCare AI platform.
+                Manage administrator accounts and access across the CropCare
+                AI platform.
               </p>
-
             </div>
 
             <button
@@ -189,7 +171,6 @@ const ManageAdmin = () => {
             >
               + Add Admin
             </button>
-
           </div>
 
           {/* SEARCH FILTER */}
@@ -206,7 +187,6 @@ const ManageAdmin = () => {
           />
         </>
       )}
-
     </div>
   );
 };

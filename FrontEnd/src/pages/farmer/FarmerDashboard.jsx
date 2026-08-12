@@ -49,7 +49,7 @@ const quickActions = [
   {
     icon: "🧪",
     title: "Find a seed lab",
-    path: "/farmer/seed-labs",
+    path: "/farmer/seedlabs",
     type: "tertiary",
   },
 ];

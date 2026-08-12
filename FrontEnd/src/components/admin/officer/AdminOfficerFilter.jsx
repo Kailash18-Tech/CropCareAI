@@ -1,46 +1,29 @@
 import React from "react";
 
-export default function AdminOfficerFilter({
-  selectedDistrict,
-  onDistrictChange,
-}) {
-  const districts = [
-    "Coimbatore",
-    "Erode",
-    "Salem",
-    "Tiruppur",
-    "Namakkal",
-    "Karur",
-    "Madurai",
-    "Thanjavur",
-  ];
-
+const AdminOfficerFilter = ({
+  searchTerm,
+  onSearch,
+}) => {
   return (
-    <div className="admin-officer-filter">
-      <div className="admin-officer-filter-group">
-        <label htmlFor="officer-district">
-          District
-        </label>
+    <div className="manage-officer-filter">
 
-        <select
-          id="officer-district"
-          value={selectedDistrict}
-          onChange={(e) => onDistrictChange(e.target.value)}
-        >
-          <option value="all">
-            All Districts
-          </option>
+      <div className="manage-officer-search">
 
-          {districts.map((district) => (
-            <option
-              key={district}
-              value={district}
-            >
-              {district}
-            </option>
-          ))}
-        </select>
+        <span className="manage-officer-search-icon">
+          🔍
+        </span>
+
+        <input
+          type="text"
+          placeholder="Search officers..."
+          value={searchTerm}
+          onChange={(event) => onSearch(event.target.value)}
+        />
+
       </div>
+
     </div>
   );
-}
+};
+
+export default AdminOfficerFilter;

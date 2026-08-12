@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import '../../styles/Public.css';
+import { useState } from "react";
+import "../../styles/Public.css";
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
@@ -11,12 +11,13 @@ export default function Contact() {
 
   return (
     <main>
-      {/* Contact Hero */}
+      {/* ================================
+          CONTACT HERO
+      ================================= */}
+
       <section className="hero">
         <div className="wrap">
-          <span className="eyebrow">
-            Get in touch
-          </span>
+          <span className="kicker">Get in touch</span>
 
           <h1 className="hero-h">
             We're here to help.
@@ -30,19 +31,21 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section>
+      {/* ================================
+          CONTACT SECTION
+      ================================= */}
+
+      <section className="contact-section">
         <div className="wrap">
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: '0.8fr 1.2fr',
-              gap: '32px',
-              alignItems: 'start',
-            }}
-          >
-            {/* Contact Information */}
-            <div>
+
+          <div className="contact-grid">
+
+            {/* ==========================
+                CONTACT INFORMATION
+            =========================== */}
+
+            <div className="contact-info">
+
               <span className="kicker">
                 Contact us
               </span>
@@ -57,151 +60,135 @@ export default function Contact() {
                 about CropCare AI, we'd love to hear from you.
               </p>
 
-              <div
-                style={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: '20px',
-                  marginTop: '28px',
-                }}
-              >
-                <div className="card feature-card">
-                  <div className="fc-ico">📧</div>
-                  <h3>Email</h3>
+              <div className="contact-info-cards">
+
+                {/* Email */}
+
+                <div className="card feature-card contact-info-card">
+
+                  <div className="fc-ico">
+                    📧
+                  </div>
+
+                  <h3>
+                    Email
+                  </h3>
+
                   <p>
                     support@cropcareai.com
                   </p>
+
                 </div>
 
-                <div className="card feature-card">
-                  <div className="fc-ico">📍</div>
-                  <h3>Location</h3>
+                {/* Location */}
+
+                <div className="card feature-card contact-info-card">
+
+                  <div className="fc-ico">
+                    📍
+                  </div>
+
+                  <h3>
+                    Location
+                  </h3>
+
                   <p>
                     CropCare AI Agriculture Technology Team
                   </p>
+
                 </div>
+
               </div>
             </div>
 
-            {/* Contact Form */}
-            <div className="card">
-              <form onSubmit={handleSubmit}>
-                <div
-                  style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    gap: '18px',
-                  }}
-                >
-                  <div>
-                    <label
-                      htmlFor="name"
-                      style={{
-                        display: 'block',
-                        marginBottom: '8px',
-                        fontWeight: 600,
-                      }}
-                    >
-                      Name
-                    </label>
+            {/* ==========================
+                CONTACT FORM
+            =========================== */}
 
-                    <input
-                      id="name"
-                      name="name"
-                      type="text"
-                      placeholder="Enter your name"
-                      required
-                      style={{
-                        width: '100%',
-                        padding: '12px 14px',
-                        border: '1px solid var(--color-border)',
-                        borderRadius: 'var(--radius-sm)',
-                        background: 'var(--color-card)',
-                        color: 'var(--color-text)',
-                      }}
-                    />
-                  </div>
+            <div className="card contact-form-card">
 
-                  <div>
-                    <label
-                      htmlFor="email"
-                      style={{
-                        display: 'block',
-                        marginBottom: '8px',
-                        fontWeight: 600,
-                      }}
-                    >
-                      Email
-                    </label>
+              <form
+                className="contact-form"
+                onSubmit={handleSubmit}
+              >
 
-                    <input
-                      id="email"
-                      name="email"
-                      type="email"
-                      placeholder="Enter your email"
-                      required
-                      style={{
-                        width: '100%',
-                        padding: '12px 14px',
-                        border: '1px solid var(--color-border)',
-                        borderRadius: 'var(--radius-sm)',
-                        background: 'var(--color-card)',
-                        color: 'var(--color-text)',
-                      }}
-                    />
-                  </div>
+                {/* Name */}
 
-                  <div>
-                    <label
-                      htmlFor="message"
-                      style={{
-                        display: 'block',
-                        marginBottom: '8px',
-                        fontWeight: 600,
-                      }}
-                    >
-                      Message
-                    </label>
+                <div className="contact-form-group">
 
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows="6"
-                      placeholder="How can we help you?"
-                      required
-                      style={{
-                        width: '100%',
-                        padding: '12px 14px',
-                        border: '1px solid var(--color-border)',
-                        borderRadius: 'var(--radius-sm)',
-                        background: 'var(--color-card)',
-                        color: 'var(--color-text)',
-                        resize: 'vertical',
-                      }}
-                    />
-                  </div>
+                  <label htmlFor="name">
+                    Name
+                  </label>
 
-                  <button
-                    type="submit"
-                    className="btn btn-primary"
-                  >
-                    Send message
-                  </button>
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    placeholder="Enter your name"
+                    required
+                  />
 
-                  {submitted && (
-                    <p
-                      style={{
-                        color: 'var(--color-success)',
-                        fontWeight: 600,
-                      }}
-                    >
-                      Your message has been submitted.
-                    </p>
-                  )}
                 </div>
+
+                {/* Email */}
+
+                <div className="contact-form-group">
+
+                  <label htmlFor="email">
+                    Email
+                  </label>
+
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="Enter your email"
+                    required
+                  />
+
+                </div>
+
+                {/* Message */}
+
+                <div className="contact-form-group">
+
+                  <label htmlFor="message">
+                    Message
+                  </label>
+
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="6"
+                    placeholder="How can we help you?"
+                    required
+                  />
+
+                </div>
+
+                {/* Submit */}
+
+                <button
+                  type="submit"
+                  className="btn btn-primary contact-submit-btn"
+                >
+                  Send message
+                </button>
+
+                {/* Success Message */}
+
+                {submitted && (
+                  <p className="contact-success">
+                    Your message has been submitted.
+                  </p>
+                )}
+
               </form>
+
             </div>
+
           </div>
+
         </div>
       </section>
     </main>

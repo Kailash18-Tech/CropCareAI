@@ -3,6 +3,8 @@ import { Routes, Route } from "react-router-dom";
 // =========================
 // PUBLIC
 // =========================
+import PublicLayout from "../layouts/PublicLayout";
+
 import Home from "../pages/public/Home";
 import Features from "../pages/public/Features";
 import About from "../pages/public/About";
@@ -41,7 +43,7 @@ import OfficerReports from "../pages/officer/OfficerReports";
 import OfficerProfile from "../pages/officer/OfficerProfile";
 import OfficerNotifications from "../pages/officer/OfficerNotifications";
 import OfficerSettings from "../pages/officer/OfficerSettings";
-
+import OfficerAlert from "../pages/officer/OfficerAlert"
 // =========================
 // ADMIN
 // =========================
@@ -67,66 +69,215 @@ export default function AppRoutes() {
           PUBLIC PAGES
       ========================= */}
 
-      <Route path="/" element={<Home />} />
-      <Route path="/features" element={<Features />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/contact" element={<Contact />} />
+      <Route element={<PublicLayout />}>
+
+        <Route path="/" element={<Home />} />
+        <Route path="/features" element={<Features />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+
+      </Route>
+
+      {/* Login & Signup stay outside PublicLayout */}
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
+
 
       {/* =========================
           FARMER PAGES
       ========================= */}
 
       <Route path="/farmer" element={<FarmerLayout />}>
+
         <Route index element={<FarmerDashboard />} />
-        <Route path="disease" element={<DiseaseDetection />} />
-        <Route path="soil" element={<SoilAdvice />} />
-        <Route path="mandi" element={<MandiPrices />} />
-        <Route path="seedlabs" element={<SeedLabs />} />
-        <Route path="weather" element={<Weather />} />
-        <Route path="schemes" element={<GovernmentSchemes />} />
-        <Route path="savedschemes" element={<SavedSchemes />} />
-        <Route path="reports" element={<Reports />} />
-        <Route path="profile" element={<Profile />} />
-        <Route path="settings" element={<Settings />} />
-        <Route path="notifications" element={<Notifications />} />
+
+        <Route
+          path="disease"
+          element={<DiseaseDetection />}
+        />
+
+        <Route
+          path="soil"
+          element={<SoilAdvice />}
+        />
+
+        <Route
+          path="mandi"
+          element={<MandiPrices />}
+        />
+
+        <Route
+          path="seedlabs"
+          element={<SeedLabs />}
+        />
+
+        <Route
+          path="weather"
+          element={<Weather />}
+        />
+
+        <Route
+          path="schemes"
+          element={<GovernmentSchemes />}
+        />
+
+        <Route
+          path="savedschemes"
+          element={<SavedSchemes />}
+        />
+
+        <Route
+          path="reports"
+          element={<Reports />}
+        />
+
+        <Route
+          path="profile"
+          element={<Profile />}
+        />
+
+        <Route
+          path="settings"
+          element={<Settings />}
+        />
+
+        <Route
+          path="notifications"
+          element={<Notifications />}
+        />
+
       </Route>
+
 
       {/* =========================
           DISTRICT OFFICER PAGES
       ========================= */}
 
       <Route path="/officer" element={<OfficerLayout />}>
-        <Route index element={<OfficerDashboard />} />
-        <Route path="farmers" element={<FarmerManagement />} />
-        <Route path="diseasereports" element={<DiseaseMonitoring />} />
-        <Route path="soilinfo" element={<SoilInformation />} />
-        <Route path="mandi" element={<MandiMonitoring />} />
-        <Route path="schemes" element={<SchemeManagement />} />
-        <Route path="reports" element={<OfficerReports />} />
-        <Route path="profile" element={<OfficerProfile />} />
-        <Route path="notifications" element={<OfficerNotifications />} />
-        <Route path="settings" element={<OfficerSettings />} />
+
+        <Route
+          index
+          element={<OfficerDashboard />}
+        />
+
+        <Route
+          path="farmers"
+          element={<FarmerManagement />}
+        />
+
+        <Route
+          path="diseasereports"
+          element={<DiseaseMonitoring />}
+        />
+
+        <Route
+          path="soilinfo"
+          element={<SoilInformation />}
+        />
+
+        <Route
+          path="mandi"
+          element={<MandiMonitoring />}
+        />
+
+        <Route
+          path="schemes"
+          element={<SchemeManagement />}
+        />
+
+        <Route
+          path="sendalert"
+          element={<OfficerAlert />}
+        />
+        <Route
+          path="reports"
+          element={<OfficerReports />}
+        />
+
+        <Route
+          path="profile"
+          element={<OfficerProfile />}
+        />
+
+        <Route
+          path="notifications"
+          element={<OfficerNotifications />}
+        />
+
+        <Route
+          path="settings"
+          element={<OfficerSettings />}
+        />
+
       </Route>
+
 
       {/* =========================
           ADMIN PAGES
       ========================= */}
 
       <Route path="/admin" element={<AdminLayout />}>
-        <Route index element={<AdminDashboard />} />
-        <Route path="farmers" element={<AdminFarmerManagement />} />
-        <Route path="manage-admins" element={<ManageAdmin />} />
-        <Route path="officers" element={<OfficerManagement />} />
-        <Route path="disease-reports" element={<AdminDiseaseMonitoring />} />
-        <Route path="seedlabs" element={<AdminSeedLabs />} />
-        <Route path="mandi" element={<AdminMandiMonitoring/>} />
-        <Route path="schemes" element={<AdminSchemes />} />
-        <Route path="reports" element={<AdminReports />} />
-         <Route path="notifications" element={<AdminNotifications />} />
-         <Route path="profile" element={<AdminProfile />} />
-         <Route path="settings" element={<AdminSettings />} />
+
+        <Route
+          index
+          element={<AdminDashboard />}
+        />
+
+        <Route
+          path="farmers"
+          element={<AdminFarmerManagement />}
+        />
+
+        <Route
+          path="manage-admins"
+          element={<ManageAdmin />}
+        />
+
+        <Route
+          path="officers"
+          element={<OfficerManagement />}
+        />
+
+        <Route
+          path="disease-reports"
+          element={<AdminDiseaseMonitoring />}
+        />
+
+        <Route
+          path="seedlabs"
+          element={<AdminSeedLabs />}
+        />
+
+        <Route
+          path="mandi"
+          element={<AdminMandiMonitoring />}
+        />
+
+        <Route
+          path="schemes"
+          element={<AdminSchemes />}
+        />
+
+        <Route
+          path="reports"
+          element={<AdminReports />}
+        />
+
+        <Route
+          path="notifications"
+          element={<AdminNotifications />}
+        />
+
+        <Route
+          path="profile"
+          element={<AdminProfile />}
+        />
+
+        <Route
+          path="settings"
+          element={<AdminSettings />}
+        />
+
       </Route>
 
     </Routes>

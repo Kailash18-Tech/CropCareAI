@@ -131,6 +131,13 @@ export default function Login() {
 
         </div>
 
+        {/* Back Home */}
+        <Link
+          to="/"
+          className="back-home"
+        >
+          ← Back to home
+        </Link>
       </div>
     </main>
   );

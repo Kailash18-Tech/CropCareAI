@@ -40,6 +40,11 @@ icon: "📋",
 to: "/officer/schemes",
 },
 {
+label: "Send Alert",
+icon: "⚠️",
+to: "/officer/sendalert",
+},
+{
 label: "Reports",
 icon: "📊",
 to: "/officer/reports",

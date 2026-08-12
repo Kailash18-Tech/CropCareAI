@@ -1,360 +1,704 @@
 /* =========================================================
    CropCare AI
-   Admin Officer Management
-========================================================= */
+   Admin - Officer Management
+   ========================================================= */
+
 
 /* =========================================================
    PAGE
-========================================================= */
+   ========================================================= */
 
-.admin-officer-page {
+.manage-officer-page {
   width: 100%;
-  max-width: 1600px;
-  margin: 0 auto;
+  min-height: 100%;
+  padding: 24px;
+  box-sizing: border-box;
 }
+
 
 /* =========================================================
    PAGE HEADER
-========================================================= */
+   ========================================================= */
 
-.admin-officer-header {
-  margin-bottom: var(--space-lg);
-}
-
-.admin-officer-eyebrow {
-  display: inline-block;
-  margin-bottom: var(--space-xs);
-
-  font-size: var(--fs-xs);
-  font-weight: var(--fw-bold);
-
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-
-  color: var(--color-primary);
-}
-
-.admin-officer-header h1 {
-  margin: 0;
-
-  font-size: clamp(var(--fs-xl), 2.5vw, 32px);
-  font-weight: var(--fw-bold);
-
-  color: var(--color-text);
-}
-
-.admin-officer-header p {
-  margin: var(--space-xs) 0 0;
-
-  font-size: var(--fs-sm);
-  color: var(--color-text-muted);
-}
-
-/* =========================================================
-   SECTION
-========================================================= */
-
-.admin-officer-section {
-  margin-top: var(--space-lg);
-}
-
-.admin-section-header {
-  margin-bottom: var(--space-md);
-}
-
-.admin-section-header h2 {
-  margin: 0;
-
-  font-size: var(--fs-lg);
-  font-weight: var(--fw-bold);
-
-  color: var(--color-text);
-}
-
-.admin-section-header p {
-  margin: 4px 0 0;
-
-  font-size: var(--fs-sm);
-
-  color: var(--color-text-muted);
-}
-
-/* =========================================================
-   FILTER
-========================================================= */
-
-.admin-officer-filter {
+.manage-officer-header {
   display: flex;
   align-items: center;
-
-  padding: 18px;
-
-  background: #eef8f0;
-
-  border: 1px solid #d7eadb;
-  border-radius: var(--radius-md);
-
-  box-shadow: var(--shadow-sm);
-
-  margin-bottom: var(--space-lg);
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 24px;
 }
 
-.admin-officer-filter-group {
-  display: flex;
-  align-items: center;
-
-  gap: 12px;
+.manage-officer-title h1 {
+  margin: 0 0 6px;
+  color: #183c28;
+  font-size: 28px;
+  font-weight: 700;
 }
 
-.admin-officer-filter-group label {
-  font-size: var(--fs-sm);
-  font-weight: var(--fw-bold);
-
-  color: var(--color-text);
+.manage-officer-title p {
+  margin: 0;
+  color: #6b7d71;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
-.admin-officer-filter-group select {
-  min-width: 200px;
 
-  padding: 10px 12px;
+/* =========================================================
+   ADD OFFICER BUTTON
+   ========================================================= */
 
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-sm);
+.manage-officer-add-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 12px 18px;
+  background: #2f6f46;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
 
-  background: #ffffff;
+.manage-officer-add-btn:hover {
+  background: #255b39;
+  transform: translateY(-1px);
+}
 
-  font-size: var(--fs-sm);
 
-  color: var(--color-text);
+/* =========================================================
+   SEARCH FILTER
+   ========================================================= */
+
+.manage-officer-filter {
+  width: 100%;
+  margin-bottom: 24px;
+  padding: 18px 20px;
+  background: #f3f8f4;
+  border: 1px solid #d8e7dc;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+
+.manage-officer-search {
+  position: relative;
+  width: 100%;
+}
+
+.manage-officer-search-icon {
+  position: absolute;
+  left: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 15px;
+  pointer-events: none;
+}
+
+.manage-officer-search input {
+  width: 100%;
+  height: 42px;
+
+  padding: 0 13px 0 40px;
+
+  border: 1px solid #cbdccf;
+  border-radius: 7px;
 
   outline: none;
 
-  cursor: pointer;
+  background: #ffffff;
+  color: #263d2e;
 
-  transition:
-    border-color var(--transition-fast),
-    box-shadow var(--transition-fast);
+  font-size: 14px;
+
+  box-sizing: border-box;
+
+  transition: 0.2s ease;
 }
 
-.admin-officer-filter-group select:focus {
-  border-color: var(--color-primary);
-
-  box-shadow: 0 0 0 3px rgba(39, 125, 67, 0.12);
+.manage-officer-search input::placeholder {
+  color: #9aa99f;
 }
+
+.manage-officer-search input:focus {
+  border-color: #5b936b;
+  box-shadow: 0 0 0 3px rgba(91, 147, 107, 0.12);
+}
+
 
 /* =========================================================
-   TABLE
-========================================================= */
+   TABLE SECTION
+   ========================================================= */
 
-.admin-officer-table-wrapper {
+.manage-officer-table-section {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+
+/* =========================================================
+   SECTION HEADER
+   ========================================================= */
+
+.manage-officer-section-header {
+  margin-bottom: 16px;
+}
+
+.manage-officer-section-header h2 {
+  margin: 0 0 5px;
+  color: #183c28;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.manage-officer-section-header p {
+  margin: 0;
+  color: #6b7d71;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   TABLE WRAPPER
+   ========================================================= */
+
+.manage-officer-table-wrapper {
   width: 100%;
 
   overflow-x: auto;
 
-  background: #eef8f0;
+  background: #f3f8f4;
 
-  border: 1px solid #d7eadb;
-  border-radius: var(--radius-md);
+  border: 1px solid #d8e7dc;
+  border-radius: 12px;
 
-  box-shadow: var(--shadow-sm);
+  box-sizing: border-box;
 }
 
-.admin-officer-table {
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+.manage-officer-table {
   width: 100%;
-  min-width: 980px;
+  min-width: 850px;
 
   border-collapse: collapse;
+
+  background: #f3f8f4;
 }
 
-.admin-officer-table thead {
-  background: #e3f2e6;
+
+/* =========================================================
+   TABLE HEADER
+   ========================================================= */
+
+.manage-officer-table thead {
+  background: #e6f1e9;
 }
 
-.admin-officer-table th {
+.manage-officer-table th {
   padding: 14px 16px;
+
+  border-bottom: 1px solid #cfded3;
+
+  color: #294936;
+
+  font-size: 13px;
+  font-weight: 700;
 
   text-align: left;
 
-  font-size: var(--fs-xs);
-  font-weight: var(--fw-bold);
-
-  color: var(--color-text);
-
   white-space: nowrap;
-
-  border-bottom: 1px solid #d7eadb;
 }
 
-.admin-officer-table td {
-  padding: 14px 16px;
 
-  font-size: var(--fs-sm);
+/* =========================================================
+   TABLE BODY
+   ========================================================= */
 
-  color: var(--color-text);
+.manage-officer-table td {
+  padding: 15px 16px;
 
-  border-bottom: 1px solid #d7eadb;
+  border-bottom: 1px solid #dce8df;
+
+  color: #405449;
+
+  font-size: 13px;
 
   vertical-align: middle;
 }
 
-.admin-officer-table tbody tr:last-child td {
+.manage-officer-table tbody tr:last-child td {
   border-bottom: none;
 }
 
-.admin-officer-table tbody tr {
-  transition: background var(--transition-fast);
+.manage-officer-table tbody tr:hover {
+  background: #edf5ef;
 }
 
-.admin-officer-table tbody tr:hover {
-  background: #e7f5e9;
-}
 
 /* =========================================================
    OFFICER NAME
-========================================================= */
+   ========================================================= */
 
-.admin-officer-name {
+.manage-officer-name {
   display: flex;
   align-items: center;
+  gap: 10px;
 
-  gap: var(--space-sm);
+  min-width: 200px;
+}
 
-  font-weight: var(--fw-bold);
+.manage-officer-avatar {
+  width: 36px;
+  height: 36px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+
+  background: #dcecdf;
+
+  color: #2f6f46;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.manage-officer-name span {
+  color: #23432f;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   OFFICER ID
+   ========================================================= */
+
+.manage-officer-id {
+  display: inline-block;
+
+  padding: 5px 9px;
+
+  border-radius: 6px;
+
+  background: #e5f1e8;
+
+  color: #356847;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   EMAIL
+   ========================================================= */
+
+.manage-officer-email {
+  color: #52675a;
+
+  font-size: 13px;
 
   white-space: nowrap;
 }
 
-.admin-officer-avatar {
-  width: 36px;
-  height: 36px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* =========================================================
+   DISTRICT
+   ========================================================= */
 
-  flex-shrink: 0;
+.manage-officer-district {
+  display: inline-block;
 
-  border-radius: var(--radius-sm);
+  padding: 5px 9px;
 
-  background: var(--color-secondary-light);
+  border-radius: 6px;
 
-  color: var(--color-primary-dark);
+  background: #e5f1e8;
 
-  font-size: var(--fs-sm);
-  font-weight: var(--fw-bold);
+  color: #356847;
+
+  font-size: 12px;
+  font-weight: 600;
 }
 
-.admin-officer-district {
-  font-weight: var(--fw-semibold);
-}
 
 /* =========================================================
    STATUS
-========================================================= */
+   ========================================================= */
 
-.admin-officer-status {
+.manage-officer-status {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
+  gap: 6px;
 
-  padding: 5px 11px;
+  padding: 5px 10px;
 
-  border-radius: var(--radius-pill);
+  border-radius: 20px;
 
-  font-size: var(--fs-xs);
-  font-weight: var(--fw-bold);
+  font-size: 12px;
+  font-weight: 600;
 }
 
-.admin-officer-status.active {
-  background: rgba(39, 125, 67, 0.1);
-  color: var(--color-primary);
+.manage-officer-status.active {
+  background: #dff1e4;
+  color: #27713d;
 }
 
-.admin-officer-status.pending {
-  background: rgba(217, 153, 32, 0.12);
-  color: #9a6a00;
+.manage-officer-status.inactive {
+  background: #f4e3e1;
+  color: #a0443b;
 }
 
-.admin-officer-status.inactive {
-  background: rgba(180, 60, 60, 0.1);
-  color: #a33a3a;
-}
 
 /* =========================================================
-   REMOVE BUTTON
-========================================================= */
+   STATUS DOT
+   ========================================================= */
 
-.admin-officer-remove-btn {
-  padding: 7px 14px;
+.manage-officer-status-dot {
+  width: 7px;
+  height: 7px;
 
-  border: 1px solid #f0b8b8;
-  border-radius: var(--radius-sm);
+  border-radius: 50%;
 
-  background: rgba(220, 53, 69, 0.1);
-
-  color: #b42332;
-
-  font-size: var(--fs-xs);
-  font-weight: var(--fw-bold);
-
-  cursor: pointer;
-
-  transition:
-    background var(--transition-fast),
-    border-color var(--transition-fast);
+  background: currentColor;
 }
 
-.admin-officer-remove-btn:hover {
-  background: rgba(220, 53, 69, 0.18);
-
-  border-color: #e29a9a;
-}
 
 /* =========================================================
-   EMPTY STATE
-========================================================= */
+   EMPTY TABLE
+   ========================================================= */
 
-.admin-officer-empty {
-  padding: var(--space-xl);
+.manage-officer-empty {
+  padding: 40px 20px !important;
+
+  color: #7a8b80 !important;
 
   text-align: center;
 
-  color: var(--color-text-muted);
-
-  font-size: var(--fs-sm);
+  font-size: 14px !important;
 }
+
+
+/* =========================================================
+   FORM CONTAINER
+   ========================================================= */
+
+.manage-officer-form-container {
+  width: 100%;
+
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  padding: 28px;
+
+  background: #f3f8f4;
+
+  border: 1px solid #d8e7dc;
+
+  border-radius: 12px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   FORM HEADER
+   ========================================================= */
+
+.manage-officer-form-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 18px;
+}
+
+.manage-officer-form-header h2 {
+  margin: 0 0 6px;
+
+  color: #183c28;
+
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.manage-officer-form-header p {
+  margin: 0;
+
+  color: #6b7d71;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   BACK BUTTON
+   ========================================================= */
+
+.manage-officer-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  margin-bottom: 24px;
+
+  padding: 9px 14px;
+
+  border: 1px solid #c9ddce;
+  border-radius: 7px;
+
+  background: #ffffff;
+
+  color: #2f6f46;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.manage-officer-back-btn:hover {
+  background: #eaf4ed;
+
+  border-color: #aecaaf;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.manage-officer-form {
+  width: 100%;
+}
+
+
+/* =========================================================
+   FORM GRID
+   ========================================================= */
+
+.manage-officer-form-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 20px;
+}
+
+
+/* =========================================================
+   FORM GROUP
+   ========================================================= */
+
+.manage-officer-form-group {
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.manage-officer-form-group label {
+  color: #294936;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   FORM INPUTS
+   ========================================================= */
+
+.manage-officer-form-group input,
+.manage-officer-form-group select {
+  width: 100%;
+
+  height: 44px;
+
+  padding: 0 12px;
+
+  border: 1px solid #cbdccf;
+
+  border-radius: 7px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #263d2e;
+
+  font-size: 14px;
+
+  box-sizing: border-box;
+
+  transition: 0.2s ease;
+}
+
+.manage-officer-form-group input::placeholder {
+  color: #9aa99f;
+}
+
+.manage-officer-form-group input:focus,
+.manage-officer-form-group select:focus {
+  border-color: #5b936b;
+
+  box-shadow: 0 0 0 3px rgba(91, 147, 107, 0.12);
+}
+
+
+/* =========================================================
+   FORM ERROR
+   ========================================================= */
+
+.manage-officer-form-error {
+  color: #c0392b;
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   FORM ACTIONS
+   ========================================================= */
+
+.manage-officer-form-actions {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 12px;
+
+  margin-top: 28px;
+
+  padding-top: 20px;
+
+  border-top: 1px solid #dce8df;
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+   ========================================================= */
+
+.manage-officer-submit-btn {
+  padding: 11px 22px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background: #2f6f46;
+
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.manage-officer-submit-btn:hover {
+  background: #255b39;
+
+  transform: translateY(-1px);
+}
+
 
 /* =========================================================
    RESPONSIVE
-========================================================= */
+   ========================================================= */
 
 @media (max-width: 900px) {
-  .admin-officer-filter {
+  .manage-officer-table-wrapper {
+    overflow-x: auto;
+  }
+}
+
+
+/* =========================================================
+   TABLET / MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .manage-officer-page {
+    padding: 18px;
+  }
+
+  .manage-officer-header {
     align-items: flex-start;
+
     flex-direction: column;
   }
 
-  .admin-officer-filter-group {
+  .manage-officer-add-btn {
     width: 100%;
-    align-items: flex-start;
+  }
+
+  .manage-officer-filter {
+    padding: 16px;
+  }
+
+  .manage-officer-form-container {
+    padding: 20px;
+  }
+
+  .manage-officer-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .manage-officer-form-actions {
     flex-direction: column;
   }
 
-  .admin-officer-filter-group select {
+  .manage-officer-submit-btn {
     width: 100%;
   }
 }
 
-@media (max-width: 640px) {
-  .admin-officer-header h1 {
-    font-size: var(--fs-xl);
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .manage-officer-page {
+    padding: 14px;
   }
 
-  .admin-officer-filter {
-    padding: var(--space-sm);
+  .manage-officer-title h1 {
+    font-size: 23px;
   }
 
-  .admin-officer-table-wrapper {
-    border-radius: var(--radius-sm);
+  .manage-officer-form-container {
+    padding: 16px;
+  }
+
+  .manage-officer-form-header h2 {
+    font-size: 19px;
+  }
+
+  .manage-officer-table th,
+  .manage-officer-table td {
+    padding: 12px;
   }
 }
